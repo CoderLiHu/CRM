@@ -15,6 +15,9 @@ a{text-decoration:none;}
 .pubilc_pad{ padding:15px;}
 .margin-r25{margin-right: 25px;}
 .margin-r15{margin-right: 15px;}
+.margin-t5{margin-top: 5px;}
+.margin-t25{margin-top: 25px;}
+.padding0{padding:0;}
 .line{margin: 12px 0 10px; border-bottom: 1px solid #eee; padding-bottom: 9px;}
 
 /*login*/
@@ -78,10 +81,17 @@ a{text-decoration:none;}
 .store_title .pull-right .iconfont{ padding-right:0px; }
 .store_form{ height: 100%;}
 .store_form table tr th,.store_form table tr td{ text-align: center; }
+.store_form table tr td.text-left{ text-align:left; }
 .store_form table tr td{vertical-align: middle;}
-.tag_1{ background-color: #78a0f0; color:#fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; overflow: hidden;}
-.tag_2{ background-color: #c79c71; color:#fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; overflow: hidden;}
-.tag_3{ background-color: #50c8c8; color:#fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; overflow: hidden;}
+.tag{ color:#fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; overflow: hidden;}
+.tag_green{ background-color: #77D03C; }
+.tag_brown{ background-color: #c79c71; }
+.tag_yellow{ background-color: #FFA424; }
+.tag_blue{ background-color: #50C8C8; }
+.tag_red{ background-color: #DF4665; }
+.tag_pink{ background-color: #EE7698; }
+.tag_purple{ background-color: #DE59B1; }
+.tag_gray{ background-color: #CCCCCC; }
 .btn-add1{ width:100px; margin-bottom: 8px; background-color: #35a8e3; color: #fff}
 .btn-add1:hover{background-color: #40b3ee; color: #fff}
 .btn-add1:active,.btn-add1 .active{ background-color: #35a8e3; color: #fff}
@@ -91,3 +101,6 @@ a{text-decoration:none;}
 
 /*creat by lihu*/
 .btn-equalwidth{width:6rem;}
+.text_orange{color: #FFA424;}
+.relative{position: relative;}
+.absolute{position: absolute;}

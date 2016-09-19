@@ -89,6 +89,164 @@
     </ul>
   </div>
 
+  <!-- content -->
+  <div class="right_bar pad-none">
+        <div class="row">
+          <div class="col-sm-12">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <div class="row">
+                    <div class="col-xs-6 col-lg-9">
+                      <h3 class="boright">私海商户</h3>
+                    </div>
+                    <div class="col-xs-6 col-lg-3">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入商户名称进行查询">
+                        <span class="input-group-btn">
+                          <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pane-body pubilc_pad">
+                  <!-- typein formgroup -->
+                  <form class="form-inline">
+                    <div class="row ">
+                      <div class="col-sm-7">
+                        <div class="form-group pull-right">
+                          <label for="calendar">时间：</label>
+                          <div class="input-group " id="calendar">
+                            <span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
+                            <input type="text" style="width: 200px" name="reservation" id="reservationtime" class="form-control" value="08/01/2013 - 08/01/2013"  class="span4"/>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-5">
+                        <div class="form-group pull-right">
+                          <div class="btn-group">
+                            <label for="calendar">商户状态：</label>
+                              <select id="disabledSelect" class="form-control">
+                                <option>全部</option>
+                                  <option>未分配</option>
+                                  <option>未拜访</option>
+                                  <option>未签约</option>
+                              </select>
+                          </div>
+                        </div>  
+                      </div>
+                    </div>
+                  </form>
+                  <div class="line"></div>
+                  <div class="store ">
+                      <!-- storetable title -->
+                    <div class="store_title">
+                      <form class="form-inline">
+                        <div class="checkbox margin-r15">
+                          <label>
+                            <input type="checkbox" value="">&nbsp;&nbsp;全选
+                          </label>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-sm btn-white btn-equalwidth">批量拜访</button>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-sm btn-white btn-equalwidth">批量放弃</button>
+                        </div>
+                        <div class="form-group pull-right margin-t5">
+                          商户数目：0/1256
+                        </div>
+                      </form>
+                    </div>
+                    <!-- store table -->
+                    <div class="store_form">
+                      <table class="table table-bordered">
+                        <tr class="active text-center">
+                          <th></th>
+                          <th>商户编号</th>
+                          <th>入库时间</th>
+                          <th>商户名称</th>
+                          <th>商户分类</th>
+                          <th>联系电话</th>
+                          <th>省/市</th>
+                          <th>区/县</th>
+                          <th>商圈</th>
+                          <th>详细地址</th>
+                          <th class="col-sm-1">状态</th>
+                          <th class="col-sm-1">操作</th>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input type="checkbox" value="">
+                          </td>
+                          <td>Noo1</td>
+                          <td>2016-06-14</td>
+                          <td>鹿港小镇（西直门店）</td>
+                          <td>台湾菜</td>
+                          <td>189********</td>
+                          <td>北京市</td>
+                          <td>西城区</td>
+                          <td>西直门/动物园</td>
+                          <td>北京市西城区西直门xx街道xx号</td>
+                          <td><span class="tag tag_green">已拜访</span></td>
+                          <td>
+                            <button type="button" class="btn btn-info btn-xs btn-block">拜访</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block">放弃</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block">查看</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input type="checkbox" value="">
+                          </td>
+                          <td>Noo1</td>
+                          <td>2016-06-14</td>
+                          <td>鹿港小镇（西直门店）</td>
+                          <td>台湾菜</td>
+                          <td>189********</td>
+                          <td>北京市</td>
+                          <td>西城区</td>
+                          <td>西直门/动物园</td>
+                          <td>北京市西城区西直门xx街道xx号</td>
+                          <td><span class="tag tag_brown">未拜访</span></td>
+                          <td>
+                            <button type="button" class="btn btn-info btn-xs btn-block">拜访</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block">放弃</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block">查看</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <input type="checkbox" value="">
+                          </td>
+                          <td>Noo1</td>
+                          <td>2016-06-14</td>
+                          <td>鹿港小镇（西直门店）</td>
+                          <td>台湾菜</td>
+                          <td>189********</td>
+                          <td>北京市</td>
+                          <td>西城区</td>
+                          <td>西直门/动物园</td>
+                          <td>北京市西城区西直门xx街道xx号</td>
+                          <td><span class="tag tag_yellow">已签约</span></td>
+                          <td>
+                            <button type="button" class="btn btn-info btn-xs btn-block">拜访</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block">放弃</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block">查看</button>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="store_foot"></div>
+                  </div>
+              </div>
+              </div>
+          </div>
+        </div>
+  </div>
+
+
+
   </body>
 </html>
  
