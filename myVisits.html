@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的拜访</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/crm.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+     <!-- headbar -->
+  <nav class="navbar navbar-crm navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html"><img class="logo_pad" src="img/index_logo.png" alt="销售CRM系统"></span></a>
+      </div>
+
+      <!-- alert -->
+      <div class="alert alert-warning alert-dismissible fade in alert1 hidden">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        您今天收到10个系统注册消息，去激活（点击跳转到后台->成员管理页面）
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#" class="thumbnail" id="user_bg">某人</a>
+          </li>
+          <li>
+            <div class="sanj dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a href="login.html">退出系统</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- navbar -->
+  <div class="left_bar sidebar pad-none">
+    <ul class="leftbar_list">
+      <li class="active">
+        <div class="list_title" data-toggle="collapse" href="#ListG1"  onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
+      </li>
+      <li>
+        <div class="list_title" data-toggle="collapse" href="#ListG1"><i class="iconfont">&#xe601;</i>商户资源<span><img src="img/downarrow.png"></span></div>
+        <ul id="#ListG1" class="list_panel">
+          <li><a href="merPublic.html">公海商户库</a></li>
+          <li><a href="typein.html">商户信息录入</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="list_title" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
+        <ul id="#ListG2" class="list_panel">
+          <li><a href="merchantsPrivate.html">私海商户库</a></li>
+          <li><a href="myVisits.html">我的拜访</a></li>
+          <li><a href="#">款项核实</a></li>
+          <li><a href="#">上单</a></li>
+        </ul>
+      </li>
+      <li>
+      <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
+        <ul id="#ListG3" class="list_panel">
+          <li><a href="#">我的消息</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  </body>
+</html>
+ 

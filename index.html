@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>销售CRM系统</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/crm.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script src="js/jquery-3.0.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+  <!-- headbar -->
+	<nav class="navbar navbar-crm navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="index.html"><img class="logo_pad" src="img/index_logo.png" alt="销售CRM系统"></span></a>
+      </div>
+
+      <!-- alert -->
+      <div class="alert alert-warning alert-dismissible fade in alert1 hidden">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        您今天收到10个系统注册消息，去激活（点击跳转到后台->成员管理页面）
+      </div>
+
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="#" class="thumbnail" id="user_bg">某人</a>
+          </li>
+          <li>
+            <div class="sanj dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="caret"></span>
+            </div>
+            <ul class="dropdown-menu">
+              <li><a href="login.html">退出系统</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- navbar -->
+  <div class="left_bar sidebar pad-none">
+    <ul class="leftbar_list">
+      <li class="active">
+        <div class="list_title" data-toggle="collapse" href="#ListG1"  onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
+      </li>
+      <li>
+        <div class="list_title" data-toggle="collapse" href="#ListG1"><i class="iconfont">&#xe601;</i>商户资源<span><img src="img/downarrow.png"></span></div>
+        <ul id="#ListG1" class="list_panel">
+          <li><a href="merPublic.html">公海商户库</a></li>
+          <li><a href="typein.html">商户信息录入</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="list_title" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
+        <ul id="#ListG2" class="list_panel">
+          <li><a href="merchantsPrivate.html">私海商户库</a></li>
+          <li><a href="myVisits.html">我的拜访</a></li>
+          <li><a href="#">款项核实</a></li>
+          <li><a href="#">上单</a></li>
+        </ul>
+      </li>
+      <li>
+      <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
+        <ul id="#ListG3" class="list_panel">
+          <li><a href="#">我的消息</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- content -->
+	<div class="right_bar pad-none">
+    <!-- common use -->
+    <div class="rightbar_top margin20">
+      <span class="brand">我最常用</span>
+      <ul class="right_bar_pills">
+        <li><a href="#">我的拜访</a></li>
+        <li><a href="#">私海商户</a></li>
+        <li><a href="#" class="addm" data-toggle="modal" data-target="#addmerchants">+</a></li>
+      </ul>
+    </div>
+    
+    <div class="row">
+      <!-- map -->
+      <div class="col-sm-9">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="boright">商户分布地图</h3>
+          </div>
+          <div class="pane-body pubilc_pad">
+            <form class="margin20">
+              <textarea class="form-control" rows="1" placeholder="此为说明栏" style="resize:none;"></textarea>
+            </form>
+            <form class="form-inline margin15">
+              <div class="form-group">
+                <label class="sr-only"></label>
+                <p class="form-control-static">选择区域&nbsp;&nbsp;</p>
+              </div>
+              <div class="form-group">
+                <label class="sr-only">省</label>
+                <select id="disabledSelect" class="form-control">
+                  <option>省/市</option>
+                  <option>北京市</option>
+                  <option>天津市</option>
+                  <option>上海市</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="sr-only">市</label>
+                <select id="disabledSelect" class="form-control">
+                  <option>市</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="sr-only">区/县</label>
+                <select id="disabledSelect" class="form-control">
+                  <option>区/县</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="sr-only">商圈</label>
+                <select id="disabledSelect" class="form-control">
+                  <option>商圈/街道地址</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-warning">&nbsp;&nbsp;查询&nbsp;&nbsp;</button>
+            </form>
+            <div class="map row">
+              <div class="col-sm-10">
+               加载地图
+              </div>
+              <div class="col-sm-2 map_detail">
+               <p>图例： &nbsp;&nbsp;&nbsp;&nbsp;数量：</p>
+               <ul class="map-num">
+                 <li><i class="iconfont red">&#xe606;</i>已上线&nbsp;&nbsp;<span class="red">3000</span></li>
+                 <li><i class="iconfont green">&#xe606;</i>已签约&nbsp;&nbsp;<span class="blue">5000</span></li>
+               </ul>
+               <p class="map-num">合作商户总数：<br><span class="blue big">10000</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- remind and notice -->
+      <div class="col-sm-3">
+        <!-- wait remind -->
+        <div class="panel panel-default wait1">
+          <div class="panel-heading2"><i class="iconfont">&#xe605;</i>待办事项提醒</div>
+          <div class="panel-body">
+            <div class="waiting">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#wait_all" data-toggle="tab">全部</a></li>
+                <li><a href="#wait_1" data-toggle="tab">待办</a></li>
+                <li><a href="#wait_2" data-toggle="tab">提醒</a></li>
+              </ul>
+              <div class="tab-content">
+                <div id="wait_all" class="tab-pane fade active in pubilc_pad">
+                  <p><b>今日拜访：</b>完成100个电话拜访</p>
+                  <p><b>今日任务：</b>完成3个商户的上门拜访</p>
+                  <p><b>项目提醒：</b>您有30个项目....</p>
+                  <p><b>今日拜访：</b>您有2家商户上线，请确认商户信息</p>
+                  <p><b>即将下线：</b>您有50家商户即将下线，请及时与商家联系跟进</p>
+                </div>
+                <div id="wait_1" class="tab-pane fade pubilc_pad">2</div>
+                <div id="wait_2" class="tab-pane fade pubilc_pad">3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- motice -->
+        <div class="panel panel-default wait1">
+          <div class="panel-heading2"><i class="iconfont">&#xe603;</i>公告栏</div>
+          <div class="panel-body">
+            <p><b>管理员：</b>今日系统新增200个商户资源，请各销售自行前往认领</p>
+          </div>
+        </div>
+      </div>
+    </div>
+	</div>
+  
+  <!-- addmerchants -->
+  <div id="addmerchants" class="modal fade">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <a class="btn btn-default">我的拜访
+            <!-- <span><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span> -->
+          </a>
+          <a class="btn btn-default">私海商户</a>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="col-sm-2 control-label"><strong>商户资源</strong></label>
+              <div class="col-sm-10">
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox1" value="option1">公海商户库
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox2" value="option2">商户信息录入
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label"><strong>销售中心</strong></label>
+              <div class="col-sm-10">
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox1" value="option1">私海商户
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox2" value="option2">我的拜访
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox1" value="option1">我的报告
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox2" value="option2">款项核实
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label"><strong>个人中心</strong></label>
+              <div class="col-sm-10">
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox1" value="option1">我的消息
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label"><strong>后台管理</strong></label>
+              <div class="col-sm-10">
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox1" value="option1">部门管理
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox2" value="option2">成员管理
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox1" value="option1">角色管理
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox2" value="option2">职能管理
+                </label>
+                <label class="checkbox-inline">
+                  <input type="checkbox" id="inlineCheckbox1" value="option1">资源分配
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info">确定</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>商户信息录入</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/crm.css">
+	<link rel="stylesheet" href="css/daterangepicker-bs3.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  	<script src="js/jquery-3.0.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-crm navbar-fixed-top">
+	    <div class="container-fluid">
+	      <div class="navbar-header">
+	        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	          <span class="sr-only">Toggle navigation</span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	        </button>
+	        <a href="index.html"><img class="logo_pad" src="img/index_logo.png" alt="销售CRM系统"></span></a>
+	      </div>
+
+	      <!-- alert -->
+	      <div class="alert alert-warning alert-dismissible fade in alert1  hidden">
+	        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	        您今天收到10个系统注册消息，去激活（点击跳转到后台->成员管理页面）
+	      </div>
+
+	      <div id="navbar" class="navbar-collapse collapse">
+	        <ul class="nav navbar-nav navbar-right">
+	          <li>
+	            <a href="#" class="thumbnail" id="user_bg">某人</a>
+	          </li>
+	          <li>
+	            <div class="sanj dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	              <span class="caret"></span>
+	            </div>
+	            <ul class="dropdown-menu">
+	              <li><a href="login.html">退出系统</a></li>
+	            </ul>
+	          </li>
+	        </ul>
+	      </div>
+	    </div>
+	</nav>
+    <div class="left_bar sidebar pad-none">
+	    <ul class="leftbar_list">
+	        <li>
+	          <div class="list_title" data-toggle="collapse" href="#ListG1" onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
+	        </li>
+	        <li>
+	          <div class="list_title active1" data-toggle="collapse" href="#ListG1"><i class="iconfont">&#xe601;</i>商户资源<span><img src="img/downarrow.png"></span></div>
+	          <ul id="#ListG1" class="list_panel">
+	            <li><a href="merPublic.html">公海商户库</a></li>
+	            <li><a href="typein.html" class="active2">商户信息录入</a></li>
+	          </ul>
+	        </li>
+	        <li>
+	          <div class="list_title" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
+	          <ul id="#ListG2" class="list_panel">
+	            <li><a href="merchantsPrivate.html">私海商户库</a></li>
+                <li><a href="myVisits.html">我的拜访</a></li>
+	            <li><a href="#">款项核实</a></li>
+	            <li><a href="#">上单</a></li>
+	          </ul>
+	        </li>
+	        <li>
+	        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
+	          <ul id="#ListG3" class="list_panel">
+	            <li><a href="#">我的消息</a></li>
+	          </ul>
+	        </li>
+	    </ul>
+    </div>
+	<div class="right_bar pad-none">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+		              	<h3 class="boright">商户信息录入</h3>
+		            </div>
+		            <div class="pane-body pubilc_pad">
+		            	<form class="form-horizontal">
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label"><span class="red"> * </span>集团名称：</label>
+		            			<div class="col-sm-3">
+		            				<input type="text" class="form-control" placeholder="请输入集团名称">
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label"><span class="red"> * </span>商户名称：</label>
+		            			<div class="col-sm-3">
+		            				<input type="text" class="form-control" placeholder="请输入商户名称">
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label"><span class="red"> * </span>商户分类：</label>
+		            			<div class="col-sm-3">
+		            				<select class="form-control">
+		            					<option value="请选择商户分类"></option>
+		            					<option value="商户分类1"></option>
+		            					<option value="商户分类2"></option>
+		            					<option value="商户分类3"></option>
+		            				</select>
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label"><span class="red"> * </span>联系人：</label>
+		            			<div class="col-sm-6">
+		            				<table class="table table-striped">
+		            					<tr>
+		            						<td>Frank</td>
+		            						<td>经理</td>
+		            						<td>189817213217</td>
+		            						<td>12390238</td>
+		            						<td>最后更新：李磊 2016/06/21 10:38</td>
+		            						<td><a href="#">修改</a></td>
+		            					</tr>
+		            				</table>
+		            				<span><a href="#" type="button" data-toggle="modal" data-target="#add_user">+添加联系人</a></span>
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label"><span class="red"> * </span>地址：</label>
+		            			<div class="col-sm-6 form-inline">
+		            				<select class="form-control">
+		            					<option value="请选择商户分类">省/市</option>
+		            					<option value="商户分类1">北京市</option>
+		            					<option value="商户分类2">上海市</option>
+		            				</select>
+		            				<select class="form-control">
+		            					<option value="请选择商户分类">市</option>
+		            					<option value="商户分类1">北京市</option>
+		            				</select>
+		            				<select class="form-control">
+		            					<option value="请选择商户分类">区/县</option>
+		            					<option value="商户分类1">1</option>
+		            					<option value="商户分类2">2</option>
+		            					<option value="商户分类3">3</option>
+		            				</select>
+									<select class="form-control">
+		            					<option value="请选择商户分类">商圈/街道</option>
+		            					<option value="商户分类1">北京市</option>
+		            				</select>
+		            				<input type="text" class="form-control" placeholder="请输入具体地址">
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label">合作平台：</label>
+		            			<div class="col-sm-3">
+		            				<select class="form-control">
+		            					<option value="请选择合作平台">请选择合作平台</option>
+		            					<option value="平台1">平台1</option>
+		            					<option value="平台2">平台2</option>
+		            					<option value="平台3">平台3</option>
+		            				</select>
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label"><span class="red"> * </span>商户状态：</label>
+		            			<div class="col-sm-3">
+		            				<select class="form-control">
+		            					<option value="请选择商户分类">请选择商户状态</option>
+		            					<option value="商户状态1">商户状态1</option>
+		            					<option value="商户状态2">商户状态2</option>
+		            					<option value="商户状态3">商户状态3</option>
+		            				</select>
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label"><span class="red"> * </span>信息来源：</label>
+		            			<div class="col-sm-3">
+		            				<select class="form-control">
+		            					<option value="请选择">请选择信息来源</option>
+		            					<option value="信息来源1">信息来源1</option>
+		            					<option value="信息来源2">信息来源2</option>
+		            					<option value="信息来源3">信息来源3</option>
+		            				</select>
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label">商户需求：</label>
+		            			<div class="col-sm-3">
+		            				<input type="text" class="form-control" placeholder="请输入商户需求">
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label">拜访方式：</label>
+		            			<div class="col-sm-3">
+		            				<select class="form-control">
+		            					<option value="请选择拜访方式">请选择拜访方式</option>
+		            					<option value="拜访方式1">拜访方式1</option>
+		            					<option value="拜访方式2">拜访方式2</option>
+		            					<option value="拜访方式3">拜访方式3</option>
+		            				</select>
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label">拜访详情：</label>
+		            			<div class="col-sm-3">
+		            				<textarea class="form-control" rows="3" placeholder="选填，如已拜访可将拜访结果填至此处！"></textarea>
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<label class="col-sm-4 control-label">预约下次拜访：</label>
+		            			<div class="col-sm-3 form-inline">
+		            				<select class="form-control">
+		            					<option value="年/月/日">年/月/日</option>
+		            				</select>
+		            				<select class="form-control">
+		            					<option value="时刻">时刻</option>
+		            				</select>
+		            			</div>
+		            		</div>
+		            		<div class="form-group">
+		            			<div class="col-sm-offset-4 col-sm-3 ">
+									<button type="submit" class="btn btn-info margin-r25">保存并新建</button>
+									<button type="submit" class="btn btn-success margin-r25">保存</button>
+									<button type="submit" class="btn btn-default ">重置</button>
+		            			</div>
+		            		</div>
+		            	</form>
+		            </div>
+				</div>	
+			</div>	
+		</div>
+	</div>
+	<div class="modal fade" id="add_user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  	<div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      	<div class="modal-header">
+			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title" id="myModalLabel">添加联系人</h4>
+			    </div>
+		      	<div class="modal-body">
+		        	<form class="form-horizontal">
+		        		<div class="form-group">
+	            			<label class="col-sm-3 control-label"><span class="red"> * </span>联系人名：</label>
+	            			<div class="col-sm-8">
+		            		<input type="text" class="form-control" placeholder="请输入联系人姓名">
+	            			</div>
+	            		</div>
+	            		<div class="form-group">
+	            			<label class="col-sm-3 control-label"><span class="red"> * </span>职位：</label>
+	            			<div class="col-sm-8">
+		            		<input type="text" class="form-control" placeholder="请输入职位名称">
+	            			</div>
+	            		</div>
+	            		<div class="form-group">
+	            			<label class="col-sm-3 control-label"><span class="red"> * </span>联系电话：</label>
+	            			<div class="col-sm-8">
+		            		<input type="text" class="form-control" placeholder="请输入联系电话">
+	            			</div>
+	            		</div>
+	            		<div class="form-group">
+	            			<label class="col-sm-3 control-label">QQ：</label>
+	            			<div class="col-sm-8">
+		            		<input type="text" class="form-control" placeholder="请输入QQ号码">
+	            			</div>
+	            		</div>
+		        	</form>
+		      	</div>
+		      	<div class="modal-footer">
+		        	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+		        	<button type="button" class="btn btn-info">保存</button>
+		      	</div>
+		    </div>
+		</div>
+	</div>
+</body>
+</html>
