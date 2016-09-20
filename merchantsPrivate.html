@@ -148,7 +148,7 @@
                           </label>
                         </div>
                         <div class="form-group">
-                            <button class="btn btn-sm btn-white btn-equalwidth">批量拜访</button>
+                            <button class="btn btn-sm btn-white btn-equalwidth" type="button" data-toggle="modal" data-target="#batchVisit" data-backdrop="false">批量拜访</button>
                         </div>
                         <div class="form-group">
                             <button class="btn btn-sm btn-white btn-equalwidth">批量放弃</button>
@@ -188,11 +188,11 @@
                           <td>西城区</td>
                           <td>西直门/动物园</td>
                           <td>北京市西城区西直门xx街道xx号</td>
-                          <td><span class="tag tag_green">已拜访</span></td>
+                          <td><span class="tag bg_green">已拜访</span></td>
                           <td>
                             <button type="button" class="btn btn-info btn-xs btn-block">拜访</button>
-                            <button type="button" class="btn btn-info btn-xs btn-block">放弃</button>
-                            <button type="button" class="btn btn-info btn-xs btn-block">查看</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
                           </td>
                         </tr>
                         <tr>
@@ -208,11 +208,11 @@
                           <td>西城区</td>
                           <td>西直门/动物园</td>
                           <td>北京市西城区西直门xx街道xx号</td>
-                          <td><span class="tag tag_brown">未拜访</span></td>
+                          <td><span class="tag bg_brown">未拜访</span></td>
                           <td>
                             <button type="button" class="btn btn-info btn-xs btn-block">拜访</button>
-                            <button type="button" class="btn btn-info btn-xs btn-block">放弃</button>
-                            <button type="button" class="btn btn-info btn-xs btn-block">查看</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
                           </td>
                         </tr>
                         <tr>
@@ -228,11 +228,11 @@
                           <td>西城区</td>
                           <td>西直门/动物园</td>
                           <td>北京市西城区西直门xx街道xx号</td>
-                          <td><span class="tag tag_yellow">已签约</span></td>
+                          <td><span class="tag bg_yellow">已签约</span></td>
                           <td>
                             <button type="button" class="btn btn-info btn-xs btn-block">拜访</button>
-                            <button type="button" class="btn btn-info btn-xs btn-block">放弃</button>
-                            <button type="button" class="btn btn-info btn-xs btn-block">查看</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
+                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
                           </td>
                         </tr>
                       </table>
@@ -244,9 +244,130 @@
           </div>
         </div>
   </div>
-
-
+  
+  <!-- Modal batchVisit-->
+  <div class="modal fade in" id="batchVisit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:330px" >
+      <div class="modal-content bg_black text_white" style="width:330px; padding:20px">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-2 text_green" style="font-size:3rem" >
+              <span class="glyphicon glyphicon-ok-sign" ></span>
+            </div>
+            <div class="col-xs-10">
+              您已成功添加商戶到我的拜访，现在就去<a class="link" href="myVisits.html">添加拜访详情</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal giveUp -->
+  <div class="modal fade" id="giveUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:300px">
+      <div class="modal-content" style="width:300px;padding:15px">
+        <div class="modal-body">
+          <p>资源放弃后可能会被其他成员领取，你确定放弃吗？</p>
+        </div>
+        <div class="row">
+          <div class="col-xs-6">
+            <button type="button" class="btn bg_blue btn-equalwidth pull-right" data-dismiss="modal">确定</button>
+          </div>
+          <div class="col-xs-6">
+            <button type="button" class="btn bg_gray btn-equalwidth" data-dismiss="modal" > 取消</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal checkMerchant -->
+  <div class="modal fade" id="checkMerchant" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="margin:12% auto">
+      <div class="modal-content" >
+        <div class="modal-header bg_primary">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">商品详情:</div>
+            <div class="col-xs-10">猫屎咖啡（望京店）</div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">品牌名:</div>
+            <div class="col-xs-10">猫屎咖啡</div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">商户分类:</div>
+            <div class="col-xs-10">饮品</div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">商户等级:</div>
+            <div class="col-xs-10">A</div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">联系人:</div>
+            <div class="col-xs-10">
+              <table class="table table-striped">
+                <tbody>
+                  <tr>
+                    <td>Frank</td>
+                    <td>经理</td>
+                    <td>189817213217</td>
+                    <td>12390238</td>
+                    <td>最后更新：李磊 2016/06/21 10:38</td>
+                    <td><a href="#">修改</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">地址:</div>
+            <div class="col-xs-10">北京市海淀区西直门25号</div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">合作平台:</div>
+            <div class="col-xs-10">百度糯米，大众点评，饿了么</div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">信息来源:</div>
+            <div class="col-xs-10">大库</div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">商户需求:</div>
+            <div class="col-xs-10">点菜</div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">拜访次数:</div>
+            <div class="col-xs-10">2</div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">拜访方式:</div>
+            <div class="col-xs-10">约访</div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">拜访结果:</div>
+            <div class="col-xs-8" style="border:1px solid #333">20160615 拜访目的：谈需求<br> 拜访结果：相谈甚欢balabalalalala <br>20160615 拜访目的：谈需求<br> 拜访结果：相谈甚欢balabalalalala </div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">状态:</div>
+            <div class="col-xs-10"></div>
+          </div>
+          <div class="row margin10">
+            <div class="col-xs-2 text_bold text-right">签约功能:</div>
+            <div class="col-xs-10">点菜系统</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 
   </body>
+  <script>
+  $('#batchVisit').on('shown.bs.modal', function () {
+    setTimeout(function(){$("#batchVisit").modal("hide")},6000);
+  })
+  </script>
 </html>
- 
