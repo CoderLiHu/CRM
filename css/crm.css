@@ -10,8 +10,11 @@ a{text-decoration:none;}
 .margin20{margin-bottom: 20px;}
 .margin30{margin-bottom: 30px}
 .margin-r25{margin-right: 25px;}
+.margin-r20{margin-right: 20px;}
 .margin-r15{margin-right: 15px;}
 .margin-t5{margin-top: 5px;}
+.margin-t10{margin-top: 10px;}
+.margin-t20{margin-top: 20px;}
 .margin-t25{margin-top: 25px;}
 .padding0{padding:0px;}
 .padding2{padding:2px;}
@@ -19,16 +22,20 @@ a{text-decoration:none;}
 .padding10{padding:10px;}
 .padding15{padding:15px;}
 .padleft5{padding-left: 5px;}
+.padleft15{padding-left: 15px;}
 .pad-none{padding-left: 0px}
 .height_s{height: 80px;}
 .height_m{height: 100px;}
 .height_b{height: 150px;}
 .height_l{height: 200px;}
+.height700{height: 700px;}
 .height_full{height: 100vh;}
 .width800{width: 800px;}
+.width900{width: 900px;}
 .width300{width: 300px;}
 .border1{border: 1px #BBB solid;border-radius: 2px;}
 .border0{border-right:0;}
+.bordernone{border:0;}
 .overflowy-scroll{ overflow-y: scroll; }
 .overflowx-scroll{ overflow-x: scroll; }
 .control-label{font-weight:normal; font-size: 14px} 
@@ -114,6 +121,7 @@ a{text-decoration:none;}
 .bg_gray{ background-color: #CCCCCC; }
 .bg_black{ background-color: rgba(0,0,0,.7); }
 .bg_black5{ background-color: rgba(0,0,0,.5); }
+.bg_black1{ background-color: rgba(0,0,0,.1); }
 .btn-add1{ width:100px; margin-bottom: 8px; background-color: #35a8e3; color: #fff}
 .btn-add1:hover{background-color: #40b3ee; color: #fff}
 .btn-add1:active,.btn-add1 .active{ background-color: #35a8e3; color: #fff}
@@ -142,6 +150,7 @@ a{text-decoration:none;}
 .text_xs{font-size: 0.7rem;}
 .text_big{font-size: 1.1rem;}
 .text_large{font-size: 1.5rem;}
+.lineheight2{line-height: 2rem;}
 .relative{position: relative;}
 .absolute{position: absolute;}
 
