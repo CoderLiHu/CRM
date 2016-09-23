@@ -61,20 +61,20 @@
   <!-- navbar -->
   <div class="left_bar sidebar pad-none">
     <ul class="leftbar_list">
-      <li class="active">
-        <div class="list_title" data-toggle="collapse" href="#ListG1"  onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
+      <li>
+        <div class="list_title" onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
       </li>
       <li>
         <div class="list_title" data-toggle="collapse" href="#ListG1"><i class="iconfont">&#xe601;</i>商户资源<span><img src="img/downarrow.png"></span></div>
-        <ul id="#ListG1" class="list_panel">
+        <ul id="ListG1" class="list_panel collapse in">
           <li><a href="merPublic.html">公海商户库</a></li>
           <li><a href="typein.html">商户信息录入</a></li>
         </ul>
       </li>
       <li>
-        <div class="list_title" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
-        <ul id="#ListG2" class="list_panel">
-          <li><a href="merchantsPrivate.html">私海商户库</a></li>
+        <div class="list_title active1" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
+        <ul id="ListG2" class="list_panel collapse in">
+          <li><a href="merchantsPrivate.html" class="active">私海商户库</a></li>
           <li><a href="myVisits.html">我的拜访</a></li>
           <li><a href="#">款项核实</a></li>
           <li><a href="#">上单</a></li>
@@ -82,7 +82,7 @@
       </li>
       <li>
       <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
-        <ul id="#ListG3" class="list_panel">
+        <ul id="ListG3" class="list_panel collapse in">
           <li><a href="#">我的消息</a></li>
         </ul>
       </li>
@@ -154,6 +154,7 @@
                             <button class="btn btn-sm btn-white btn-equalwidth">批量放弃</button>
                         </div>
                         <div class="form-group pull-right margin-t5">
+                          <button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip" data-placement="top" title="导出"><span class="glyphicon glyphicon-download-alt text_big"></span></button>
                           商户数目：0/1256
                         </div>
                       </form>
@@ -210,7 +211,10 @@
                           <td>北京市西城区西直门xx街道xx号</td>
                           <td><span class="tag bg_brown">未拜访</span></td>
                           <td>
-                            <button type="button" class="btn btn-info btn-xs btn-block">拜访</button>
+                            <div class="input-group margin5" id="calendar">
+                              <input type="text" style="width: 100px" name="reservation" id="reservationtime" class="form-control text_small" value="10/01/2016"  class="span4"/>
+                              <span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
+                            </div>
                             <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
                             <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
                           </td>
@@ -230,7 +234,7 @@
                           <td>北京市西城区西直门xx街道xx号</td>
                           <td><span class="tag bg_yellow">已签约</span></td>
                           <td>
-                            <button type="button" class="btn btn-info btn-xs btn-block">拜访</button>
+                            <p type="button" class="text-center text_small">已预约（明日）2016/10/11拜访</p>
                             <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
                             <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
                           </td>
@@ -281,82 +285,113 @@
     </div>
   </div>
   <!-- Modal checkMerchant -->
-  <div class="modal fade" id="checkMerchant" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" style="margin:12% auto">
+  <div class="modal fade height_full" id="checkMerchant" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog width800" style="margin:70px auto">
       <div class="modal-content" >
         <div class="modal-header bg_primary">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          <h4 class="modal-title text-center text_white text_bold" id="myModalLabel">商户详情</h4>
         </div>
-        <div class="modal-body">
+        <div class="modal-body text_small">
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">商品详情:</div>
-            <div class="col-xs-10">猫屎咖啡（望京店）</div>
+            <div class="col-xs-10 pad-none text_gray">猫屎咖啡（望京店）</div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">品牌名:</div>
-            <div class="col-xs-10">猫屎咖啡</div>
+            <div class="col-xs-10 pad-none text_gray">猫屎咖啡</div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">商户分类:</div>
-            <div class="col-xs-10">饮品</div>
+            <div class="col-xs-10 pad-none text_gray">饮品</div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">商户等级:</div>
-            <div class="col-xs-10">A</div>
+            <div class="col-xs-10 pad-none text_gray">A</div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">联系人:</div>
-            <div class="col-xs-10">
+            <div class="col-xs-10 pad-none text_gray">
               <table class="table table-striped">
                 <tbody>
                   <tr>
-                    <td>Frank</td>
-                    <td>经理</td>
+                    <td>Frank<span class="glyphicon glyphicon-flag text_blue text_big padleft5" ></span></td>
+                    <td>经理负责人</td>
                     <td>189817213217</td>
-                    <td>12390238</td>
-                    <td>最后更新：李磊 2016/06/21 10:38</td>
-                    <td><a href="#">修改</a></td>
-                  </tr>
+                    <td>189817213</td>
+                    <td>最后更新：司马相如 2016/06/21 10:38</td>
+                  </tr> 
                 </tbody>
               </table>
             </div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">地址:</div>
-            <div class="col-xs-10">北京市海淀区西直门25号</div>
+            <div class="col-xs-10 pad-none text_gray">北京市海淀区西直门25号</div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">合作平台:</div>
-            <div class="col-xs-10">百度糯米，大众点评，饿了么</div>
+            <div class="col-xs-10 pad-none text_gray">百度糯米，大众点评，饿了么</div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">信息来源:</div>
-            <div class="col-xs-10">大库</div>
+            <div class="col-xs-10 pad-none text_gray">大库</div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">商户需求:</div>
-            <div class="col-xs-10">点菜</div>
+            <div class="col-xs-10 pad-none text_gray">点菜</div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">拜访次数:</div>
-            <div class="col-xs-10">2</div>
+            <div class="col-xs-10 pad-none text_gray">2</div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">拜访方式:</div>
-            <div class="col-xs-10">约访</div>
+            <div class="col-xs-10 pad-none text_gray">约访</div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">拜访结果:</div>
-            <div class="col-xs-8" style="border:1px solid #333">20160615 拜访目的：谈需求<br> 拜访结果：相谈甚欢balabalalalala <br>20160615 拜访目的：谈需求<br> 拜访结果：相谈甚欢balabalalalala </div>
+            <div class="col-xs-9 border1 pad-none text_gray overflowy-scroll height_m padding5" style="padding-left:10px">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th>拜访时间</th>
+                    <th>拜访方式</th>
+                    <th>拜访目的</th>
+                    <th class="width300">拜访结果</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2016/10/01</td>
+                    <td>电话拜访</td>
+                    <td>谈需求</td>
+                    <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                  </tr>
+                  <tr>
+                    <td>2016/10/01</td>
+                    <td>电话拜访</td>
+                    <td>谈需求</td>
+                    <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                  </tr>
+                  <tr>
+                    <td>2016/10/01</td>
+                    <td>电话拜访</td>
+                    <td>谈需求</td>
+                    <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">状态:</div>
-            <div class="col-xs-10"></div>
+            <div class="col-xs-10 pad-none text_gray">已拜访</div>
           </div>
           <div class="row margin10">
             <div class="col-xs-2 text_bold text-right">签约功能:</div>
-            <div class="col-xs-10">点菜系统</div>
+            <div class="col-xs-10 pad-none text_gray">点菜系统</div>
           </div>
         </div>
       </div>
@@ -366,8 +401,11 @@
 
   </body>
   <script>
-  $('#batchVisit').on('shown.bs.modal', function () {
-    setTimeout(function(){$("#batchVisit").modal("hide")},6000);
-  })
+    $('#batchVisit').on('shown.bs.modal', function () {
+      setTimeout(function(){$("#batchVisit").modal("hide")},3000);
+    });
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    });
   </script>
 </html>

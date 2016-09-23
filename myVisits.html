@@ -8,7 +8,7 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="css/crm.css">
+    <link rel="stylesheet" href="css/crm.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -61,28 +61,28 @@
     <!-- navbar -->
     <div class="left_bar sidebar pad-none">
       <ul class="leftbar_list">
-        <li class="active">
-          <div class="list_title" data-toggle="collapse" href="#ListG1"  onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
+        <li>
+          <div class="list_title" onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
         </li>
         <li>
           <div class="list_title" data-toggle="collapse" href="#ListG1"><i class="iconfont">&#xe601;</i>商户资源<span><img src="img/downarrow.png"></span></div>
-          <ul id="#ListG1" class="list_panel">
+          <ul id="ListG1" class="list_panel  collapse in">
             <li><a href="merPublic.html">公海商户库</a></li>
             <li><a href="typein.html">商户信息录入</a></li>
           </ul>
         </li>
         <li>
-          <div class="list_title" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
-          <ul id="#ListG2" class="list_panel">
+          <div class="list_title active1" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
+          <ul id="ListG2" class="list_panel  collapse in">
             <li><a href="merchantsPrivate.html">私海商户库</a></li>
-            <li><a href="myVisits.html">我的拜访</a></li>
+            <li><a href="myVisits.html" class="active">我的拜访</a></li>
             <li><a href="#">款项核实</a></li>
             <li><a href="#">上单</a></li>
           </ul>
         </li>
         <li>
-        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
-          <ul id="#ListG3" class="list_panel">
+          <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
+          <ul id="ListG3" class="list_panel  collapse in">
             <li><a href="#">我的消息</a></li>
           </ul>
         </li>
@@ -185,7 +185,6 @@
                             <th>商户详情</th>
                             <th>商户需求</th>
                             <th>拜访次数</th>
-                            <th>拜访方式</th>
                             <th>拜访详情</th>
                             <th class="col-sm-1">状态</th>
                             <th>预约下次拜访</th>
@@ -195,41 +194,80 @@
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_red text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_red text_bold pull-right">1类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block" title="竞争对手已上线该店">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_pink">待上线</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
                               <button type="button" class="btn btn-info btn-xs btn-block">编辑</button>
                               <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#removedBtn" data-backdrop="false">移出</button>
                             </td>
-                          </tr> <tr>
+                          </tr>
+                          <tr>
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_red text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_red text_bold pull-right">1类</span></li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_green">已拜访</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
                               <button type="button" class="btn btn-info btn-xs btn-block">编辑</button>
                               <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#unRemovedBtn" data-backdrop="false">移出</button>
                             </td>
-                          </tr> <tr>
+                          </tr> 
+                          <tr>
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_orange text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_orange text_bold pull-right">2类</span></li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_gray">不合作</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
@@ -249,7 +287,6 @@
                             <th>商户详情</th>
                             <th>商户需求</th>
                             <th>拜访次数</th>
-                            <th>拜访方式</th>
                             <th>拜访详情</th>
                             <th class="col-sm-1">状态</th>
                             <th>预约下次拜访</th>
@@ -259,41 +296,82 @@
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_purple text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_purple text_bold pull-right">1类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_blue">待签约</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
                               <button type="button" class="btn btn-info btn-xs btn-block">编辑</button>
                               <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#removedBtn" data-backdrop="false">移出</button>
                             </td>
-                          </tr> <tr>
+                          </tr> 
+                          <tr>
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_red text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_red text_bold pull-right">1类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
-                            <td><span class="tag bg_blue">待签约</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block" title="竞争对手已上线该店">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
+                            <td><span class="tag bg_pink">待上线</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
                               <button type="button" class="btn btn-info btn-xs btn-block">编辑</button>
                               <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#removedBtn" data-backdrop="false">移出</button>
                             </td>
-                          </tr> <tr>
+                          </tr> 
+                          <tr>
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_purple text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_purple text_bold pull-right">3类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_blue">待签约</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
@@ -313,7 +391,6 @@
                             <th>商户详情</th>
                             <th>商户需求</th>
                             <th>拜访次数</th>
-                            <th>拜访方式</th>
                             <th>拜访详情</th>
                             <th class="col-sm-1">状态</th>
                             <th>预约下次拜访</th>
@@ -323,41 +400,82 @@
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_red text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_red text_bold pull-right">1类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_yellow">已签约</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
                               <button type="button" class="btn btn-info btn-xs btn-block">编辑</button>
                               <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#removedBtn" data-backdrop="false">移出</button>
                             </td>
-                          </tr> <tr>
+                          </tr> 
+                          <tr>
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_orange text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_orange text_bold pull-right">2类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_yellow">已签约</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
                               <button type="button" class="btn btn-info btn-xs btn-block">编辑</button>
                               <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#removedBtn" data-backdrop="false">移出</button>
                             </td>
-                          </tr> <tr>
+                          </tr> 
+                          <tr>
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_red text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_red text_bold pull-right">1类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_yellow">已签约</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
@@ -377,7 +495,6 @@
                             <th>商户详情</th>
                             <th>商户需求</th>
                             <th>拜访次数</th>
-                            <th>拜访方式</th>
                             <th>拜访详情</th>
                             <th class="col-sm-1">状态</th>
                             <th>预约下次拜访</th>
@@ -387,11 +504,24 @@
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_red text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_red text_bold pull-right">1类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_pink">待上线</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
@@ -403,11 +533,24 @@
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_orange text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_orange text_bold pull-right">2类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_pink">待上线</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
@@ -427,7 +570,6 @@
                             <th>商户详情</th>
                             <th>商户需求</th>
                             <th>拜访次数</th>
-                            <th>拜访方式</th>
                             <th>拜访详情</th>
                             <th class="col-sm-1">状态</th>
                             <th>预约下次拜访</th>
@@ -437,11 +579,24 @@
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_purple text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_purple text_bold pull-right">3类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_red">断约中</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
@@ -453,11 +608,24 @@
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48 <span class="text_orange text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_orange text_bold pull-right">2类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td>微信商铺</td>
                             <td>3</td>
-                            <td>陌拜</td>
-                            <td class="text-left">2016年06月15日<br>拜访目的：寻求合作<br>拜访结果：初步了解，感兴趣，继续跟踪</td>
+                            <td class="text-left">
+                              <ul>
+                                <li class="in-block margin-r25">拜访时间：2016/10/11</li>
+                                <li class="in-block">拜访方式：陌拜</li>
+                                <li>拜访目的：寻求合作</li>
+                                <li>拜访结果：初步了解，感兴趣，继续跟踪</li>
+                              </ul>
+                            </td>
                             <td><span class="tag bg_red">断约中</span></td>
                             <td>2016-07-11 <br>11:00</td>
                             <td>
@@ -477,7 +645,6 @@
                             <th>商户详情</th>
                             <th>商户需求</th>
                             <th>拜访次数</th>
-                            <th>拜访方式</th>
                             <th>拜访详情</th>
                             <th class="col-sm-1">状态</th>
                             <th>预约下次拜访</th>
@@ -487,10 +654,16 @@
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48  <span class="text_purple text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_purple text_bold pull-right">3类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td></td>
                             <td>3</td>
-                            <td></td>
                             <td class="text-left"></td>
                             <td><span class="tag bg_purple">待拜访</span></td>
                             <td></td>
@@ -503,10 +676,16 @@
                             <td>
                               <input type="checkbox" value="">
                             </td>
-                            <td class="text-left">鹿港小镇（西直门店）<br>Cris &nbsp;&nbsp;&nbsp;&nbsp;189******** <br>集团店铺数：48  <span class="text_orange text_bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2类</span></td>
+                            <td class="text-left">
+                              <ul>
+                                <li>鹿港小镇（西直门店）</li>
+                                <li>189********</li>
+                                <li>集团店铺数：48<span class="text_orange text_bold pull-right">2类</span></li>
+                                <li class="text_white text_xs bg_black5 in-block padding2" title="竞争对手已上线该店">竞对上线</li>
+                              </ul>
+                            </td>
                             <td></td>
                             <td>3</td>
-                            <td></td>
                             <td class="text-left"></td>
                             <td><span class="tag bg_purple">待拜访</span></td>
                             <td></td>
@@ -569,10 +748,10 @@
 
     // modal
     $('#removedBtn').on('shown.bs.modal', function () {
-    setTimeout(function(){$("#removedBtn").modal("hide")},2000);
+    setTimeout(function(){$("#removedBtn").modal("hide")},1000);
     });
     $('#unRemovedBtn').on('shown.bs.modal', function () {
-    setTimeout(function(){$("#unRemovedBtn").modal("hide")},2000);
+    setTimeout(function(){$("#unRemovedBtn").modal("hide")},1000);
     });
   </script>
 </html>

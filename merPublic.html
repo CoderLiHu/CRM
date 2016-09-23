@@ -63,18 +63,18 @@
     <div class="left_bar sidebar pad-none">
 	    <ul class="leftbar_list">
 	        <li>
-	          <div class="list_title" data-toggle="collapse" href="#ListG1" onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
+	          <div class="list_title" onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
 	        </li>
 	        <li>
 	          <div class="list_title active1" data-toggle="collapse" href="#ListG1"><i class="iconfont">&#xe601;</i>商户资源<span><img src="img/downarrow.png"></span></div>
-	          <ul id="#ListG1" class="list_panel">
-	            <li><a href="merPublic.html" class="active2">公海商户库</a></li>
+	          <ul id="ListG1" class="list_panel  collapse in">
+	            <li><a href="merPublic.html" class="active">公海商户库</a></li>
 	            <li><a href="typein.html">商户信息录入</a></li>
 	          </ul>
 	        </li>
 	        <li>
 	          <div class="list_title" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
-	          <ul id="#ListG2" class="list_panel">
+	          <ul id="ListG2" class="list_panel  collapse in">
 	            <li><a href="merchantsPrivate.html">私海商户库</a></li>
          		<li><a href="myVisits.html">我的拜访</a></li>
 	            <li><a href="#">款项核实</a></li>
@@ -83,7 +83,7 @@
 	        </li>
 	        <li>
 	        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
-	          <ul id="#ListG3" class="list_panel">
+	          <ul id="ListG3" class="list_panel  collapse in">
 	            <li><a href="#">我的消息</a></li>
 	          </ul>
 	        </li>
@@ -193,7 +193,7 @@
 									<button class="btn btn-sm btn-white btn-equalwidth">批量领取</button>
 									<button class="btn btn-sm btn-white btn-equalwidth">分配</button>
 									<div class="pull-right">
-										<button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip" data-placement="top" title="下载"><i class="iconfont">&#xe60a;</i></button>
+										<button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip" data-placement="top" title="导入"><span class="glyphicon glyphicon-upload text_large"></span></button>
 										商户数目：0/1256
 									</div>
 				            	</form>
@@ -284,25 +284,25 @@
     
     <!-- script -->
 	<script type="text/javascript">
-   	$(document).ready(function() {
-	    $('#reservationtime').daterangepicker({
-	    	timePicker: true,
-	        timePickerIncrement: 30,
-	        format: 'MM/DD/YYYY'
-	    }, function(start, end, label) {
-	        console.log(start.toISOString(), end.toISOString(), label);
-	    });
-	});
+	   	$(document).ready(function() {
+		    $('#reservationtime').daterangepicker({
+		    	timePicker: true,
+		        timePickerIncrement: 30,
+		        format: 'MM/DD/YYYY'
+		    }, function(start, end, label) {
+		        console.log(start.toISOString(), end.toISOString(), label);
+		    });
+		});
 
-	$(function () {
-  		$('[data-toggle="tooltip"]').tooltip()
-	})
+		$(function () {
+	  		$('[data-toggle="tooltip"]').tooltip()
+		})
 
-	$('#mystore').on('click', function () {
-		var $btn = $(this).button('loading')
-	    // business logic...
-	    $btn.button('reset')
-	})
+		$('#mystore').on('click', function () {
+			var $btn = $(this).button('loading')
+		    // business logic...
+		    $btn.button('reset')
+		})
    	</script>
 </body>
 </html>
