@@ -91,164 +91,363 @@
 
     <!-- content -->
 	<div class="right_bar pad-none">
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-		              	<h3 class="boright">商户信息录入</h3>
+		<div class="row ">
+		  <div class="col-sm-12">
+		    <div class="panel panel-default">
+		      <div class="panel-heading">
+		          <h3 class="boright">商户信息录入</h3>
+		      </div>
+		      <div class="pane-body pubilc_pad">
+		        <form>
+		          <!-- merchant basic record -->
+		          <div class="container-fluid ch-list">
+		            <div class="text_bold bg_black1 margin15 lineheight2 padding5">商户基本档案</div>
+		            <div class="row">
+		              <div class="col-xs-4">
+		                <div class="form-group">
+		                  <label  class="control-label" for="ckName"><span class="red"> * </span>商户名称</label>
+		                  <input class="form-control" id="ckName" type="text" value="奶茶爱上粉">
+		                </div>
+		              </div>
+		              <div class="col-xs-3 col-xs-offset-1">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckActivities"><span class="red"> * </span>商户业态</label>
+		                  <select class="form-control" id="ckActivities" type="select">
+		                    <option value="其他" selected="selected">其他</option>
+		                  </select>
+		                </div>
+		              </div>
+		              <div class="col-xs-3 col-xs-offset-1">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckMultiple"><span class="red"> * </span>连锁类型</label>
+		                  <select class="form-control" id="ckMultiple" type="select">
+		                    <option value="加盟连锁" selected="selected">加盟连锁</option>
+		                  </select>
+		                </div>
+		              </div>
 		            </div>
-		            <div class="pane-body pubilc_pad">
-		            	<form class="form-horizontal">
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label"><span class="red"> * </span>集团名称：</label>
-		            			<div class="col-sm-3">
-		            				<input type="text" class="form-control" placeholder="请输入集团名称">
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label"><span class="red"> * </span>商户名称：</label>
-		            			<div class="col-sm-3">
-		            				<input type="text" class="form-control" placeholder="请输入商户名称">
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label"><span class="red"> * </span>商户分类：</label>
-		            			<div class="col-sm-3">
-		            				<select class="form-control">
-		            					<option value="请选择商户分类"></option>
-		            					<option value="商户分类1"></option>
-		            					<option value="商户分类2"></option>
-		            					<option value="商户分类3"></option>
-		            				</select>
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label"><span class="red"> * </span>联系人：</label>
-		            			<div class="col-sm-6">
-		            				<table class="table table-striped">
-		            					<tr>
-		            						<td>Frank</td>
-		            						<td>经理</td>
-		            						<td>189817213217</td>
-		            						<td>12390238</td>
-		            						<td>最后更新：李磊 2016/06/21 10:38</td>
-		            						<td><a href="#">修改</a></td>
-		            					</tr>
-		            				</table>
-		            				<span><a href="#" type="button" data-toggle="modal" data-target="#add_user">+添加联系人</a></span>
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label"><span class="red"> * </span>地址：</label>
-		            			<div class="col-sm-6 form-inline">
-		            				<select class="form-control">
-		            					<option value="请选择商户分类">省/市</option>
-		            					<option value="商户分类1">北京市</option>
-		            					<option value="商户分类2">上海市</option>
-		            				</select>
-		            				<select class="form-control">
-		            					<option value="请选择商户分类">市</option>
-		            					<option value="商户分类1">北京市</option>
-		            				</select>
-		            				<select class="form-control">
-		            					<option value="请选择商户分类">区/县</option>
-		            					<option value="商户分类1">1</option>
-		            					<option value="商户分类2">2</option>
-		            					<option value="商户分类3">3</option>
-		            				</select>
-									<select class="form-control">
-		            					<option value="请选择商户分类">商圈/街道</option>
-		            					<option value="商户分类1">北京市</option>
-		            				</select>
-		            				<input type="text" class="form-control" placeholder="请输入具体地址">
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label">合作平台：</label>
-		            			<div class="col-sm-3">
-		            				<select class="form-control">
-		            					<option value="请选择合作平台">请选择合作平台</option>
-		            					<option value="平台1">平台1</option>
-		            					<option value="平台2">平台2</option>
-		            					<option value="平台3">平台3</option>
-		            				</select>
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label"><span class="red"> * </span>商户状态：</label>
-		            			<div class="col-sm-3">
-		            				<select class="form-control">
-		            					<option value="请选择商户分类">请选择商户状态</option>
-		            					<option value="商户状态1">商户状态1</option>
-		            					<option value="商户状态2">商户状态2</option>
-		            					<option value="商户状态3">商户状态3</option>
-		            				</select>
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label"><span class="red"> * </span>信息来源：</label>
-		            			<div class="col-sm-3">
-		            				<select class="form-control">
-		            					<option value="请选择">请选择信息来源</option>
-		            					<option value="信息来源1">信息来源1</option>
-		            					<option value="信息来源2">信息来源2</option>
-		            					<option value="信息来源3">信息来源3</option>
-		            				</select>
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label">商户需求：</label>
-		            			<div class="col-sm-3">
-		            				<input type="text" class="form-control" placeholder="请输入商户需求">
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label">拜访方式：</label>
-		            			<div class="col-sm-3">
-		            				<select class="form-control">
-		            					<option value="请选择拜访方式">请选择拜访方式</option>
-		            					<option value="拜访方式1">拜访方式1</option>
-		            					<option value="拜访方式2">拜访方式2</option>
-		            					<option value="拜访方式3">拜访方式3</option>
-		            				</select>
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label">拜访详情：</label>
-		            			<div class="col-sm-3">
-		            				<textarea class="form-control" rows="3" placeholder="选填，如已拜访可将拜访结果填至此处！"></textarea>
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<label class="col-sm-4 control-label">预约下次拜访：</label>
-		            			<div class="col-sm-3 form-inline">
-		            				<select class="form-control">
-		            					<option value="年/月/日">年/月/日</option>
-		            				</select>
-		            				<select class="form-control">
-		            					<option value="时刻">时刻</option>
-		            				</select>
-		            			</div>
-		            		</div>
-		            		<div class="form-group">
-		            			<div class="col-sm-offset-4 col-sm-3 ">
-									<button type="submit" class="btn btn-info margin-r25">保存并新建</button>
-									<button type="submit" class="btn btn-success margin-r25">保存</button>
-									<button type="submit" class="btn btn-default ">重置</button>
-		            			</div>
-		            		</div>
-		            	</form>
+		            <div class="row">
+		              <div class="col-xs-4">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckLabel"><span class="red"> * </span>商户标签</label>
+		                  <div class="row">
+		                    <div class="col-xs-10">
+		                      <select class="form-control" id="ckLabel" type="select">
+		                        <option value="1类">1类</option>
+		                        <option value="2类" selected="selected">2类</option>
+		                        <option value="3类">3类</option>
+		                      </select>
+		                    </div>
+		                    <div class="col-xs-2 pad-none">
+		                      <p class="form-control-static"><span class="glyphicon glyphicon-question-sign text_gray text_xl" data-placement="right" data-html="true" data-original-title="1类:认可现在付费合作;<br>2类:认可saas系统;<br>	3类:认可现在更换系统;<br>4类:认可互联网." data-trigger="hover" data-toggle="tooltip"></span></p>
+		                    </div>
+		                  </div>
+		                </div>
+		              </div>
+		              <div class="col-xs-3 col-xs-offset-1">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckRank">商户等级</label>
+		                  <div class="row">
+		                    <div class="col-xs-10">
+		                      <select class="form-control" id="ckRank" type="select">
+		                        <option value="A">A</option>
+		                        <option value="B" selected="selected">B</option>
+		                        <option value="C">C</option>
+		                      </select>
+		                    </div>
+		                    <div class="col-xs-2 pad-none">
+		                      <p class="form-control-static"><span class="glyphicon glyphicon-question-sign text_gray text_xl" data-placement="right" data-html="true" data-original-title="A类:门店16家以上;<br>B类:门店15-6家;<br>	C类:门店5-2家;<br>D类:门店1家." data-trigger="hover" data-toggle="tooltip"></span></p>
+		                    </div>
+		                  </div>
+		                </div>
+		              </div>
+		              <div class="col-xs-3 col-xs-offset-1">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckNumber">门店数</label>
+		                  <input class="form-control" id="ckNumber" type="text" value="100">
+		                </div>
+		              </div>
 		            </div>
-				</div>	
-			</div>	
+		            <div class="row">
+		              <div class="col-xs-12">
+		                <div class="form-group">
+		                  <label class="control-label"><span class="red"> * </span>地址：</label>
+		                  <div class="form-inline">
+		                    <select class="form-control margin-r20">
+		                      <option value="请选择商户分类">省/市</option>
+		                      <option value="商户分类1">北京市</option>
+		                      <option value="商户分类2">上海市</option>
+		                    </select>
+		                    <select class="form-control margin-r20">
+		                      <option value="请选择商户分类">市</option>
+		                      <option value="商户分类1">北京市</option>
+		                    </select>
+		                    <select class="form-control margin-r20">
+		                      <option value="请选择商户分类">区/县</option>
+		                      <option value="商户分类1">1</option>
+		                      <option value="商户分类2">2</option>
+		                      <option value="商户分类3">3</option>
+		                    </select>
+		                    <select class="form-control margin-r20" >
+		                      <option value="请选择商户分类">商圈/街道</option>
+		                      <option value="商户分类1">北京市</option>
+		                    </select>
+		                    <input type="text" class="form-control" placeholder="请输入具体地址">
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="row">
+		              <div class="col-xs-12">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckContacts"><span class="red"> * </span>联系人</label>
+		                  <div class="text_gray">
+		                    <table class="table table-striped">
+		                      <tbody>
+		                        <tr>
+		                          <td>Frank<span class="glyphicon glyphicon-flag text_blue text_big padleft5" ></span></td>
+		                          <td>经理负责人</td>
+		                          <td>189817213217</td>
+		                          <td>189817213</td>
+		                          <td>最后更新：司马相如 2016/06/21 10:38</td>
+		                          <td><a>修改</a></td>
+		                          <td><a>保存</a></td>
+		                        </tr> 
+		                      </tbody>
+		                    </table>
+		                    <span><a href="#" type="button" data-toggle="modal" data-target="#add_user">+添加联系人</a></span>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="row">
+		              <div class="col-xs-6">
+		                <div class="form-group">
+		                  <label class="control-label"><span class="red"> * </span>是否有人正在使用餐饮系统</label>
+		                  <div class="row">
+		                    <label class="col-xs-3 control-label">
+		                      <input type="radio" name="ifUsing" value=""> 是
+		                    </label>
+		                    <label class="col-xs-3 control-label">
+		                      <input type="radio" name="ifUsing" value=""> 否
+		                    </label>
+		                  </div>
+		                </div>
+		              </div>
+		              <div class="col-xs-4">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckBrand">系统品牌</label>
+		                  <input class="form-control" id="ckBrand" type="text" value="归到">
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+
+		          <!-- merchant followup -->
+		          <div class="container-fluid ch-list">
+		            <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">商户跟进情况</div>
+		            <div class="row">
+		              <div class="col-xs-4">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckNeed">商户需求</label>
+		                  <input class="form-control" id="ckNeed" type="text" value="点餐系统">
+		                </div>
+		              </div>
+		              <div class="col-xs-3 col-xs-offset-1">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckStatus">项目状态</label>
+		                  <select class="form-control" id="ckStatus" type="select">
+		                    <option value="已拜访" selected="selected">已拜访/option>
+		                  </select>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="row">
+		              <div class="col-xs-2">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckTime"><span class="red"> * </span>拜访次数</label>
+		                  <input class="form-control" id="ckTime" type="text" value="1">
+		                </div>
+		              </div>
+		              <div class="col-xs-5 col-xs-offset-3">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckAppointment">预约下次拜访</label>
+		                  <div class="row">
+		                    <div class="col-xs-6">
+		                      <select class="form-control">
+		                        <option value="拜访日期">拜访日期</option>
+		                      </select>
+		                    </div>
+		                    <div class="col-xs-6">
+		                      <select class="form-control">
+		                        <option value="时刻">时刻</option>
+		                      </select>
+		                    </div>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="row">
+		              <div class="col-xs-11">
+		                <label class="control-label" for="ckVisitedResult">拜访结果:</label>
+		                <div class="border1 overflowy-scroll height_m padding5" id="ckVisitedResult">
+		                  <table class="table table-hover">
+		                    <thead>
+		                      <tr>
+		                        <th>拜访时间</th>
+		                        <th>拜访方式</th>
+		                        <th>拜访目的</th>
+		                        <th class="width300">拜访结果</th>
+		                      </tr>
+		                    </thead>
+		                    <tbody>
+		                      <tr>
+		                        <td>2016/10/01</td>
+		                        <td>电话拜访</td>
+		                        <td>谈需求</td>
+		                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+		                      </tr>
+		                      <tr>
+		                        <td>2016/10/01</td>
+		                        <td>电话拜访</td>
+		                        <td>谈需求</td>
+		                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+		                      </tr>
+		                      <tr>
+		                        <td>2016/10/01</td>
+		                        <td>电话拜访</td>
+		                        <td>谈需求</td>
+		                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+		                      </tr>
+		                    </tbody>
+		                  </table>
+		                </div>
+		              </div>
+		              <div class="col-xs-1">
+		              	<span class="glyphicon glyphicon-plus-sign text_xll margin-t60 text_blue" data-toggle="modal" data-target="#visitResult"></span>
+		              </div>
+		            </div>
+		          </div>
+
+		          <!--  Great customer projects -->
+		          <div class="container-fluid ch-list margin-t20">
+		            <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">大客户项目面板</div>
+		            <div class="row">
+		              <div class="col-xs-3">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckSaler">售前顾问</label>
+		                  <input class="form-control" id="ckSaler" type="text" value="张三丰">
+		                </div>
+		              </div>
+		              <div class="col-xs-3 col-xs-offset-1">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckManager">技术顾问(项目经理)</label>
+		                  <input class="form-control" id="ckManager" type="text" value="张无忌">
+		                </div>
+		              </div>
+		              <div class="col-xs-3 col-xs-offset-1">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckSaler">其他顾问</label>
+		                  <input class="form-control" id="ckSaler" type="text" value="周芷若">
+		                </div>
+		              </div>
+		            </div>            
+		            <div class="row">
+		              <div class="col-xs-3">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckBargain">成交概率</label>
+		                  <input class="form-control" id="ckBargain" type="text" value="10%">
+		                </div>
+		              </div>
+		              <div class="col-xs-3 col-xs-offset-1">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckMoney">预计合同金额</label>
+		                  <input class="form-control" id="ckMoney" type="text" value="￥10000">
+		                </div>
+		              </div>
+		              <div class="col-xs-3 col-xs-offset-1">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckDate">预计成单日期</label>
+		                  <select class="form-control" id="ckDate">
+		                    <option value="拜访日期">拜访日期</option>
+		                  </select>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="row">
+		              <div class="col-xs-11">
+		                <label class="control-label" for="ckRemarks">备注:</label>
+		                <textarea id="ckRemarks" class="form-control" rows="6" maxlength="200"></textarea>   
+		              </div>
+		            </div>
+		          </div>
+
+		          <!-- after sale followup -->
+		          <div class="container-fluid ch-list margin-t20">
+		            <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">售后跟进情况</div>
+		            <div class="row">
+		              <div class="col-xs-5">
+		                <div>
+		                  <label class="control-label margin5">已购买产品模块 <a class="btn btn-info btn-xs btn-equalwidth"  data-toggle="modal" data-target="#addBuiedLabel">添加</a></label>
+		                  <div class="margin15">
+		                  	<span class="nobuied_label">&lt;无&gt;</span>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="row">
+		              <div class="col-xs-6">
+		                <div class="form-group">
+		                  <label class="control-label">是否可以二次销售</label>
+		                  <div class="row">
+		                    <label class="col-xs-3 control-label">
+		                      <input type="radio" name="ifUsingTwice" value=""> 是
+		                    </label>
+		                    <label class="col-xs-3 control-label">
+		                      <input type="radio" name="ifUsingTwice" value=""> 否
+		                    </label>
+		                  </div>
+		                </div>
+		              </div>
+		              <div class="col-xs-4">
+		                <div class="form-group">
+		                  <label class="control-label" for="ckNeedHelp">需要协助</label>
+		                  <input class="form-control" id="ckNeedHelp" type="text" value="">
+		                </div>
+		              </div>
+		            </div>
+		            <div class="row">
+		              <div class="col-xs-11">
+		                <label class="control-label" for="ckUseStatus">使用情况:</label>
+		                <textarea id="ckUseStatus" class="form-control" rows="3" maxlength="200"></textarea>   
+		              </div>
+		            </div>
+		          </div>
+
+		          <!-- save -->
+		          <div class="container-fluid ch-list margin-t20">
+		            <div class="row">
+		              <div class="col-sm-offset-3 col-sm-9 ">
+		                <button type="submit" class="btn btn-info margin-r25 btn-equalwidth2">保存并新建</button>
+		                <button type="submit" class="btn btn-info margin-r25 btn-equalwidth2">保存</button>
+		                <button type="submit" class="btn btn-info btn-equalwidth2">重置</button>
+		              </div>
+		            </div>
+		          </div>
+		        </form>
+		      </div>
+		    </div>  
+		  </div>  
 		</div>
 	</div>
+
+	<!-- modal adduser -->
 	<div class="modal fade" id="add_user" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  	<div class="modal-dialog" role="document">
 		    <div class="modal-content">
-		      	<div class="modal-header">
+		      	<div class="modal-header bg_primary">
 			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			        <h4 class="modal-title" id="myModalLabel">添加联系人</h4>
+			        <h4 class="modal-title text_white text-center" id="">添加联系人</h4>
 			    </div>
 		      	<div class="modal-body">
 		        	<form class="form-horizontal">
@@ -276,14 +475,152 @@
 		            		<input type="text" class="form-control" placeholder="请输入QQ号码">
 	            			</div>
 	            		</div>
+	            		<div class="form-group">
+	            			<label class="col-sm-3 control-label">设为总部联系人：</label>
+		            		<label class="col-sm-2 control-label">
+		                      <input class="margin0" type="radio" name="ifHQ" value=""> 是
+		                    </label>
+		                    <label class="col-sm-2 control-label">
+		                      <input class="margin0" type="radio" name="ifHQ" value=""> 否
+		                    </label>
+	            		</div>
 		        	</form>
 		      	</div>
 		      	<div class="modal-footer">
-		        	<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-		        	<button type="button" class="btn btn-info">保存</button>
+		        	<div class="col-sm-6 col-sm-offset-2">
+			        	<button type="button" class="btn bg_primary btn-equalwidth margin-r65 text_white">保存</button>
+			        	<button type="button" class="btn bg_gray btn-equalwidth text_white" data-dismiss="modal">取消</button>
+		        	</div>
 		      	</div>
 		    </div>
 		</div>
 	</div>
+
+	<!-- modal visit result -->
+	<div class="modal fade" id="visitResult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  	<div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      	<div class="modal-header bg_primary">
+			    	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title text_white text-center" id="">添加拜访记录</h4>
+			    </div>
+		      	<div class="modal-body">
+		        	<form class="form-horizontal">
+		        		<div class="form-group">
+	            			<label class="col-sm-3 control-label">拜访时间：</label>
+	            			<div class="col-sm-8">
+		            			<div class="input-group " id="calendar">
+								  	<span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
+                       				<input type="text" style="width: 200px" name="reservation" id="reservationtime" class="form-control" value="08/01/2013"  class="span4"/>
+								</div>
+	            			</div>
+	            		</div>
+	            		<div class="form-group">
+	            			<label class="col-sm-3 control-label">拜访方式：</label>
+	            			<div class="col-sm-8">
+		            		<select id="" class="form-control">
+			                	<option>陌拜</option>
+			                    <option>约访</option>
+			                </select>
+	            			</div>
+	            		</div>
+	            		<div class="form-group">
+	            			<label class="col-sm-3 control-label">拜访目的：</label>
+	            			<div class="col-sm-8">
+		            		<input type="text" class="form-control">
+	            			</div>
+	            		</div>
+	            		<div class="form-group">
+	            			<label class="col-sm-3 control-label">拜访结果：</label>
+	            			<div class="col-sm-8">
+		            		<textarea class="form-control" rows="3"></textarea>
+	            			</div>
+	            		</div>
+		        	</form>
+		      	</div>
+		      	<div class="modal-footer row">
+		      		<div class="col-sm-6 col-sm-offset-2">
+			        	<button type="button" class="btn bg_primary btn-equalwidth margin-r65 text_white">提交</button>
+			        	<button type="button" class="btn bg_gray btn-equalwidth text_white" data-dismiss="modal">取消</button>
+		        	</div>
+		      	</div>
+		    </div>
+		</div>
+	</div>
+
+    <!-- modal add products already buied -->
+    <div id="addBuiedLabel" class="modal fade">
+  		<div class="modal-dialog" role="document">
+  		<div class="modal-content">
+  			<div class="modal-header">
+  				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  				<a class="btn btn-default">手机点菜宝
+  					<span><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+  				</a>
+  				<a class="btn btn-default">微信餐厅
+					<span><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
+  				</a>
+  			</div>
+  			<div class="modal-body">
+  				<form class="form-horizontal">
+  					<div class="form-group">
+  						<label class="col-sm-2 control-label"><strong>门店POS:</strong></label>
+  						<div class="col-sm-10">
+  							<label class="checkbox-inline">
+  								<input type="checkbox" id="" value="option1">点单
+  							</label>
+  							<label class="checkbox-inline">
+  								<input type="checkbox" id="" value="option2">收银
+  							</label>
+  							<label class="checkbox-inline">
+  								<input type="checkbox" id="" value="option2">厨打
+  							</label>
+  							<label class="checkbox-inline">
+  								<input type="checkbox" id="" value="option2">老板通
+  							</label>
+  							<label class="checkbox-inline">
+  								<input type="checkbox" id="" value="option2">手机点菜宝
+  							</label>
+  							<label class="checkbox-inline">
+  								<input type="checkbox" id="" value="option2">聚合支付
+  							</label>
+  						</div>
+  					</div>
+  					<div class="form-group">
+  						<label class="col-sm-2 control-label"><strong>拓展模块</strong></label>
+  						<div class="col-sm-10">
+  							<label class="checkbox-inline">
+  								<input type="checkbox" id="inlineCheckbox1" value="option1">微信餐厅
+  							</label>
+  							<label class="checkbox-inline">
+  								<input type="checkbox" id="inlineCheckbox2" value="option2">云会员
+  							</label>
+  							<label class="checkbox-inline">
+  								<input type="checkbox" id="inlineCheckbox1" value="option1">聚合外卖
+  							</label>
+  						</div>
+  					</div>
+  					<div class="form-group">
+  						<label class="col-sm-2 control-label"><strong>库存管理</strong></label>
+  						<div class="col-sm-10">
+  							<label class="checkbox-inline">
+  								<input type="checkbox" id="inlineCheckbox1" value="option1">云库存
+  							</label>
+  						</div>
+  					</div>
+  				</form>
+  			</div>
+  			<div class="modal-footer">
+  				<button type="button" class="btn btn-info">确定</button>
+  				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+  			</div>
+  		</div>
+  		</div>
+    </div>
 </body>
+<script>
+	$(function () { 
+		$("[data-toggle='tooltip']").tooltip(); 
+	});
+</script>
 </html>

@@ -4,18 +4,22 @@ ul,ol,li,dl,dt,dd,p,span,form,input,table,tr,td{ padding:0; margin:0}
 ul,ol{ list-style:none}
 img{ border:none}
 a{text-decoration:none;}
+.margin0{margin: 0px !important;}
 .margin5{margin-bottom: 5px;}
 .margin10{margin-bottom: 10px;}
 .margin15{margin-bottom: 15px;}
 .margin20{margin-bottom: 20px;}
 .margin30{margin-bottom: 30px}
+.margin-r65{margin-right: 65px;}
 .margin-r25{margin-right: 25px;}
 .margin-r20{margin-right: 20px;}
 .margin-r15{margin-right: 15px;}
+.margin-l15{margin-left: 15px;}
 .margin-t5{margin-top: 5px;}
 .margin-t10{margin-top: 10px;}
 .margin-t20{margin-top: 20px;}
 .margin-t25{margin-top: 25px;}
+.margin-t60{margin-top: 60px;}
 .padding0{padding:0px;}
 .padding2{padding:2px;}
 .padding5{padding:5px;}
@@ -138,6 +142,7 @@ a{text-decoration:none;}
 .panel-body {padding:20px 0;}
 
 .btn-equalwidth{width:6rem;}
+.btn-equalwidth2{width:12rem;}
 .text_orange{color: #FFA424;}
 .text_white{color: #FFF;}
 .text_green{color: #77D03C;}
@@ -150,6 +155,8 @@ a{text-decoration:none;}
 .text_xs{font-size: 0.7rem;}
 .text_big{font-size: 1.1rem;}
 .text_large{font-size: 1.5rem;}
+.text_xl{font-size: 2rem;}
+.text_xll{font-size: 2.5rem;}
 .lineheight2{line-height: 2rem;}
 .relative{position: relative;}
 .absolute{position: absolute;}
@@ -159,3 +166,11 @@ a{text-decoration:none;}
 .link:hover{text-decoration: underline; color:#90D8FC;}
 .link:active{text-decoration: underline; color:#90D8FC;}
 
+/*tooltip*/
+.tooltip-inner{text-align: left;white-space: nowrap;}
+
+/*the label of prducts already buied*/
+.buied_label{display: inline-block; background-color:#AAA; text-align: center; margin-right: 10px; color: #FFF; padding: 5px;}
+.nobuied_label{display: inline-block; text-align: center; width: 60px; margin-right: 10px;}
+/*the label of competitor's online */
+.competitor_online{display: inline-block; background-color:#AAA; text-align: center; font-size: 0.9rem; color: #FFF; padding: 2px;}
