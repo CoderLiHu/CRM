@@ -37,8 +37,11 @@ a{text-decoration:none;}
 .width800{width: 800px;}
 .width900{width: 900px;}
 .width300{width: 300px;}
+.float-l{float:left;}
+.float-r{float:right;}
 .border1{border: 1px #BBB solid;border-radius: 2px;}
 .border0{border-right:0;}
+.bordertop{border-top: solid 4px #03BAA4;}
 .bordernone{border:0;}
 .overflowy-scroll{ overflow-y: scroll; }
 .overflowx-scroll{ overflow-x: scroll; }
@@ -49,6 +52,7 @@ a{text-decoration:none;}
 .blue{color: #5a92dd;}
 .pubilc_pad{ padding:15px;}
 .line{margin: 12px 0 10px; border-bottom: 1px solid #eee; padding-bottom: 9px;}
+
 
 /*login*/
 .Log{background: #f2f6f7; min-width: 1120px; width: 100%;}
@@ -158,6 +162,7 @@ a{text-decoration:none;}
 .text_xl{font-size: 2rem;}
 .text_xll{font-size: 2.5rem;}
 .lineheight2{line-height: 2rem;}
+.lineheight80{line-height:80px;}
 .relative{position: relative;}
 .absolute{position: absolute;}
 
@@ -174,3 +179,7 @@ a{text-decoration:none;}
 .nobuied_label{display: inline-block; text-align: center; width: 60px; margin-right: 10px;}
 /*the label of competitor's online */
 .competitor_online{display: inline-block; background-color:#AAA; text-align: center; font-size: 0.9rem; color: #FFF; padding: 2px;}
+
+/*message notice*/
+.msg-notice{width:400px; position: absolute;bottom:-18px;right:0px;z-index:9999; box-shadow: -1px -1px 1px rgba(100,100,100,.2);}
+

@@ -9,15 +9,15 @@
 	<link rel="stylesheet" href="css/crm.css">
 	<link rel="stylesheet" href="css/daterangepicker-bs3.css">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  	<script src="js/jquery-3.0.0.min.js"></script>
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+	<script src="js/jquery-3.0.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/moment.js"></script>
-    <script type="text/javascript" src="js/daterangepicker.js"></script>
+  <script type="text/javascript" src="js/daterangepicker.js"></script>
 </head>
 <body>
 	<!-- headbar -->
@@ -60,249 +60,509 @@
 	</nav>
 
 	<!-- navbar -->
-    <div class="left_bar sidebar pad-none">
-	    <ul class="leftbar_list">
-	        <li>
-	          <div class="list_title" onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
-	        </li>
-	        <li>
-	          <div class="list_title active1" data-toggle="collapse" href="#ListG1"><i class="iconfont">&#xe601;</i>商户资源<span><img src="img/downarrow.png"></span></div>
-	          <ul id="ListG1" class="list_panel  collapse in">
-	            <li><a href="merPublic.html" class="active">公海商户库</a></li>
-	            <li><a href="typein.html">商户信息录入</a></li>
-	          </ul>
-	        </li>
-	        <li>
-	          <div class="list_title" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
-	          <ul id="ListG2" class="list_panel  collapse in">
-	            <li><a href="merchantsPrivate.html">私海商户库</a></li>
-         		<li><a href="myVisits.html">我的拜访</a></li>
-	            <li><a href="#">款项核实</a></li>
-	            <li><a href="#">上单</a></li>
-	          </ul>
-	        </li>
-	        <li>
-	        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
-	          <ul id="ListG3" class="list_panel  collapse in">
-	            <li><a href="#">我的消息</a></li>
-	          </ul>
-	        </li>
-	    </ul>
-    </div>
+  <div class="left_bar sidebar pad-none">
+    <ul class="leftbar_list">
+        <li>
+          <div class="list_title" onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
+        </li>
+        <li>
+          <div class="list_title active1" data-toggle="collapse" href="#ListG1"><i class="iconfont">&#xe601;</i>商户资源<span><img src="img/downarrow.png"></span></div>
+          <ul id="ListG1" class="list_panel  collapse in">
+            <li><a href="merPublic.html" class="active">公海商户库</a></li>
+            <li><a href="typein.html">商户信息录入</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="list_title" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
+          <ul id="ListG2" class="list_panel  collapse in">
+            <li><a href="merchantsPrivate.html">私海商户库</a></li>
+       		<li><a href="myVisits.html">我的拜访</a></li>
+            <li><a href="#">款项核实</a></li>
+            <li><a href="#">上单</a></li>
+          </ul>
+        </li>
+        <li>
+        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
+          <ul id="ListG3" class="list_panel  collapse in">
+            <li><a href="#">我的消息</a></li>
+          </ul>
+        </li>
+    </ul>
+  </div>
 
-    <!-- content -->
+  <!-- content -->
 	<div class="right_bar pad-none">
-      	<div class="row">
-	        <div class="col-sm-12">
-	            <div class="panel panel-default">
-		            <div class="panel-heading">
-		              	<h3 class="boright">公海商户库</h3>
-		            </div>
-		            <div class="pane-body pubilc_pad">
-		            	<!-- typein formgroup -->
-			            <form class="form-inline">
-			           		<div class="row margin15">
-			           			<div class="col-sm-3">
-			           			  <strong>筛选条件:</strong>	
-			           			</div>
-			           		</div>
-			            	<div class="row margin15">
-			            		<div class="col-sm-3">
-					            	<div class="form-group">
-					            		<label for="calendar">入库时间：</label>
-			    						<div class="input-group " id="calendar">
-										  	<span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
-		                       				<input type="text" style="width: 200px" name="reservation" id="reservationtime" class="form-control" value="08/01/2013 - 08/01/2013"  class="span4"/>
+  	<div class="row">
+      <div class="col-sm-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+          	<h3 class="boright">公海商户库</h3>
+          </div>
+          <div class="pane-body pubilc_pad">
+          	<!-- typein formgroup -->
+            <form class="form-inline">
+           		<div class="row margin15">
+           			<div class="col-sm-3">
+           			  <strong>筛选条件:</strong>	
+           			</div>
+           		</div>
+            	<div class="row margin15">
+            		<div class="col-sm-4">
+		            	<div class="form-group">
+		            		<label for="calendar">入库时间：</label>
+    								<div class="input-group " id="calendar">
+               				<input type="text" name="reservation" id="reservationtime" class="form-control" value="08/01/2013 - 08/01/2013"/>
+							  			<span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
 										</div>
-					            	</div>
-				            	</div>
-				            	<div class="col-sm-9">
-					            	<div class="form-group">
-					            		<label>地区：</label>
-					            		<select id="" class="form-control margin-r15">
-						                	<option>省/市</option>
-						                    <option>北京市</option>
-						                    <option>天津市</option>
-						                    <option>广西壮族自治区</option>
-						                </select>
-						                <label class="sr-only">市：</label>
-					            		<select id="" class="form-control margin-r15">
-						                	<option>市</option>
-						                	<option>香格里拉市</option>
-						                </select>			
-            			                <label class="sr-only">区县：</label>
-					            		<select id="" class="form-control margin-r15">
-						                	<option>区/县</option>
-						                	<option>哗哗啦啦哗啦啦区</option>
-						                </select>
-						                <label class="sr-only">商圈</label>
-						                <select id="" class="form-control">
-						                	<option>请输入商圈</option>
-						                	<option>哗哗啦啦/哗哗啦啦</option>
-						                </select>
-					            	</div>
-				            	</div>
+		            	</div>
+	            	</div>
+	            	<div class="col-sm-8">
+		            	<div class="form-group">
+		            		<label>地区：</label>
+		            		<select id="" class="form-control margin-r15">
+		                	<option>省/市</option>
+		                    <option>北京市</option>
+		                    <option>天津市</option>
+		                    <option>广西壮族自治区</option>
+		                </select>
+		                <label class="sr-only">市：</label>
+		            		<select id="" class="form-control margin-r15">
+		                	<option>市</option>
+		                	<option>香格里拉市</option>
+		                </select>			
+		                <label class="sr-only">区县：</label>
+		            		<select id="" class="form-control margin-r15">
+		                	<option>区/县</option>
+		                	<option>哗哗啦啦哗啦啦区</option>
+		                </select>
+		                <label class="sr-only">商圈</label>
+		                <select id="" class="form-control">
+		                	<option>请输入商圈</option>
+		                	<option>哗哗啦啦/哗哗啦啦</option>
+		                </select>
+		            	</div>
+	            	</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-sm-3">
+		            	<div class="form-group">
+		            		<div class="btn-group">
+			            		<label for="calendar">商户状态：</label>
+	    								<select id="" class="form-control">
+			                	<option>全部</option>
+			                    <option>未分配</option>
+			                    <option>未拜访</option>
+			                    <option>未签约</option>
+			                </select>
 			            	</div>
-			            	<div class="row">
-			            		<div class="col-sm-3">
-					            	<div class="form-group">
-					            		<div class="btn-group">
-						            		<label for="calendar">商户状态：</label>
-				    						<select id="" class="form-control">
-							                	<option>全部</option>
-							                    <option>未分配</option>
-							                    <option>未拜访</option>
-							                    <option>未签约</option>
-							                </select>
-						            	</div>
-					            	</div>	
-				            	</div>
-				            	<div class="col-sm-4">
-					            	<div class="form-group">
-					            		<label>商户名称：</label>
-					            		<input style="width:240px" type="text" class="form-control" placeholder="请输入商户名称">
-					            	</div>
-				            	</div>
-				            	<div class="col-sm-4">
+		            	</div>	
+	            	</div>
+	            	<div class="col-sm-3">
 									<div class="form-group">
-					            		<label>商家分类：</label>
-					            		<select id="" class="form-control">
-						                	<option>全部</option>
-						                    <option>台湾菜</option>
-						                    <option>饮品</option>
-						                    <option>烧烤</option>
-						                    <option>海鲜大排档</option>
-						                </select>
-					            	</div>
-				            	</div>
-				            	<div class="col-sm-1">
-		            				<button type="submit" class="btn btn-warning pull-right ">&nbsp;&nbsp;&nbsp;&nbsp;查询&nbsp;&nbsp;&nbsp;&nbsp;</button>
-				            	</div>
-			            	</div>
-			            </form>
-			            <div class="line"></div>
-			            <div class="store ">
-			           	    <!-- storetable title -->
-			            	<div class="store_title">
-				            	<form class="form-inline">
-				            		<div class="checkbox margin-r15">
-									  	<label>
-									   		<input type="checkbox" value="">&nbsp;&nbsp;全选
-									  </label>
+			          		<label>商家分类：</label>
+			          		<select id="" class="form-control">
+			              	<option>全部</option>
+			                  <option>台湾菜</option>
+			                  <option>饮品</option>
+			                  <option>烧烤</option>
+			                  <option>海鲜大排档</option>
+			              </select>
+			          	</div>
+	            	</div>
+	            	<div class="col-sm-5">
+		            	<div class="form-group">
+		            		<label>商户名称：</label>
+		            		<input style="width:240px" type="text" class="form-control" placeholder="请输入商户名称">
+		            	</div>
+	            	</div>
+	            	<div class="col-sm-1">
+          				<button type="submit" class="btn btn-block btn-warning pull-right ">查询</button>
+	            	</div>
+            	</div>
+            </form>
+            <div class="line"></div>
+            <div class="store ">
+       	    	<!-- storetable title -->
+            	<div class="store_title">
+	            	<form class="form-inline">
+	            		<div class="checkbox margin-r15">
+						  			<label>
+						   				<input type="checkbox" value="">&nbsp;&nbsp;全选
+						  			</label>
 									</div>
-									<button class="btn btn-sm btn-white btn-equalwidth">批量领取</button>
-									<button class="btn btn-sm btn-white btn-equalwidth">分配</button>
-									<div class="pull-right">
+									<button type="button" class="btn btn-sm btn-white btn-equalwidth">批量领取</button>
+									<button type="button" class="btn btn-sm btn-white btn-equalwidth" data-toggle="modal" data-target="#distribution">分配</button>
+									<div class="pull-right" data-toggle="modal" data-target="#inportSuccessfully" data-backdrop="false">
 										<button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip" data-placement="top" title="导入"><span class="glyphicon glyphicon-upload text_large"></span></button>
 										商户数目：0/1256
 									</div>
-				            	</form>
-			            	</div>
-			            	<!-- store table -->
-			            	<div class="store_form">
-			            		<table class="table table-bordered">
-			            			<tr class="active text-center">
-			            				<th></th>
-			            				<th>商户编号</th>
-			            				<th>入库时间</th>
-			            				<th>商户名称</th>
-			            				<th>商户分类</th>
-			            				<th>联系电话</th>
-			            				<th>省/市</th>
-			            				<th>区/县</th>
-			            				<th>商圈</th>
-			            				<th>详细地址</th>
-			            				<th class="col-sm-1">状态</th>
-			            				<th class="col-sm-1">操作</th>
-			            			</tr>
-			            			<tr>
-			            				<td>
-			            					<input type="checkbox" value="">
-			            				</td>
-			            				<td>Noo1</td>
-			            				<td>2016-06-14</td>
-			            				<td>鹿港小镇（西直门店）</td>
-			            				<td>台湾菜</td>
-			            				<td>189********</td>
-			            				<td>北京市</td>
-			            				<td>西城区</td>
-			            				<td>西直门/动物园</td>
-			            				<td>北京市西城区西直门xx街道xx号</td>
-			            				<td><span class="tag bg_green">未分配</span></td>
-			            				<td>
-			            					<button type="button" class="btn btn-add1">领取</button><br>
-			            					<button type="button" class="btn btn-add1" style="margin-bottom:0px;">请求退领</button>
-			            				</td>
-			            			</tr>
-			            			<tr>
-			            				<td>
-			            					<input type="checkbox" value="">
-			            				</td>
-			            				<td>Noo1</td>
-			            				<td>2016-06-14</td>
-			            				<td>鹿港小镇（西直门店）</td>
-			            				<td>台湾菜</td>
-			            				<td>189********</td>
-			            				<td>北京市</td>
-			            				<td>西城区</td>
-			            				<td>西直门/动物园</td>
-			            				<td>北京市西城区西直门xx街道xx号</td>
-			            				<td><span class="tag bg_brown">未拜访</span></td>
-			            				<td>
-			            					<p class="store_tips">已被赵云龙领取，距离下线还有<strong style="color:#f00">41</strong>天</p>
-			            					<button type="button" class="btn" disabled="disabled" style="margin-bottom:0px;">已发送请求</button>
-			            				</td>
-			            			</tr>
-			            			<tr>
-			            				<td>
-			            					<input type="checkbox" value="">
-			            				</td>
-			            				<td>Noo1</td>
-			            				<td>2016-06-14</td>
-			            				<td>鹿港小镇（西直门店）</td>
-			            				<td>台湾菜</td>
-			            				<td>189********</td>
-			            				<td>北京市</td>
-			            				<td>西城区</td>
-			            				<td>西直门/动物园</td>
-			            				<td>北京市西城区西直门xx街道xx号</td>
-			            				<td><span class="tag bg_yellow">待签约</span></td>
-			            				<td>
-			            					<p class="store_tips">已被赵云龙领取，距离下线还有<strong style="color:#f00">41</strong>天</p>
-			            					<button type="button" class="btn btn-add1" style="margin-bottom:0px;">请求退领</button>
-			            				</td>
-			            			</tr>
-			            		</table>
-			            	</div>
-			            	<div class="store_foot"></div>
-			            </div>
-			        </div>
-	          	</div>
-	        </div>
+	            	</form>
+            	</div>
+            	<!-- store table -->
+            	<div class="store_form">
+            		<table class="table table-bordered">
+            			<tr class="active text-center">
+            				<th></th>
+            				<th>商户编号</th>
+            				<th>入库时间</th>
+            				<th>商户名称</th>
+            				<th>商户分类</th>
+            				<th>联系电话</th>
+            				<th>省/市</th>
+            				<th>区/县</th>
+            				<th>商圈</th>
+            				<th>详细地址</th>
+            				<th class="col-sm-1">状态</th>
+            				<th class="col-sm-1">操作</th>
+            			</tr>
+            			<tr>
+            				<td>
+            					<input type="checkbox" value="">
+            				</td>
+            				<td>Noo1</td>
+            				<td>2016-06-14</td>
+            				<td>鹿港小镇（西直门店）</td>
+            				<td>台湾菜</td>
+            				<td>189********</td>
+            				<td>北京市</td>
+            				<td>西城区</td>
+            				<td>西直门/动物园</td>
+            				<td>北京市西城区西直门xx街道xx号</td>
+            				<td><span class="tag bg_green">未分配</span></td>
+            				<td>
+            					<button type="button" class="btn btn-add1" data-toggle="modal" data-target="#getSuccessfully" data-backdrop="false">领取</button><br>
+            					<button type="button" class="btn btn-add1" data-toggle="modal" data-target="#backout" style="margin-bottom:0px;" >请求退领</button>
+            				</td>
+            			</tr>
+            			<tr>
+            				<td>
+            					<input type="checkbox" value="">
+            				</td>
+            				<td>Noo1</td>
+            				<td>2016-06-14</td>
+            				<td>鹿港小镇（西直门店）</td>
+            				<td>台湾菜</td>
+            				<td>189********</td>
+            				<td>北京市</td>
+            				<td>西城区</td>
+            				<td>西直门/动物园</td>
+            				<td>北京市西城区西直门xx街道xx号</td>
+            				<td><span class="tag bg_brown">未拜访</span></td>
+            				<td>
+            					<p class="store_tips">已被赵云龙领取，距离下线还有<strong style="color:#f00">41</strong>天</p>
+            					<button type="button" class="btn" disabled="disabled" style="margin-bottom:0px;">已发送请求</button>
+            				</td>
+            			</tr>
+            			<tr>
+            				<td>
+            					<input type="checkbox" value="">
+            				</td>
+            				<td>Noo1</td>
+            				<td>2016-06-14</td>
+            				<td>鹿港小镇（西直门店）</td>
+            				<td>台湾菜</td>
+            				<td>189********</td>
+            				<td>北京市</td>
+            				<td>西城区</td>
+            				<td>西直门/动物园</td>
+            				<td>北京市西城区西直门xx街道xx号</td>
+            				<td><span class="tag bg_yellow">待签约</span></td>
+            				<td>
+            					<p class="store_tips">已被赵云龙领取，距离下线还有<strong style="color:#f00">41</strong>天</p>
+            					<button type="button" class="btn btn-add1" style="margin-bottom:0px;">请求退领</button>
+            				</td>
+            			</tr>
+            		</table>
+            	</div>
+            	<div class="store_foot"></div>
+            </div>
+          </div>
       	</div>
+      </div>
+  	</div>
 	</div>
-    
-    <!-- script -->
-	<script type="text/javascript">
-	   	$(document).ready(function() {
-		    $('#reservationtime').daterangepicker({
-		    	timePicker: true,
-		        timePickerIncrement: 30,
-		        format: 'MM/DD/YYYY'
-		    }, function(start, end, label) {
-		        console.log(start.toISOString(), end.toISOString(), label);
-		    });
-		});
 
-		$(function () {
-	  		$('[data-toggle="tooltip"]').tooltip()
-		})
+	<!--modal inport successfully -->
+	<div class="modal fade in" id="inportSuccessfully" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:230px" >
+      <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-1 text_green text-right" style="font-size:3rem" >
+              <span class="glyphicon glyphicon-ok-sign" ></span>
+            </div>
+            <div class="col-xs-6 text-center" style="line-height:3">
+              导入成功
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!--madal inport fail -->
+	<div class="modal fade in" id="inportFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:230px" >
+      <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-1 text_red text-right" style="font-size:3rem" >
+              <span class="glyphicon glyphicon-remove-circle" ></span>
+            </div>
+            <div class="col-xs-6 text-center" style="line-height:3">
+              导入失败
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!--madal get successfully -->
+	<div class="modal fade in" id="getSuccessfully" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:230px" >
+      <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-1 text_green text-right" style="font-size:3rem" >
+              <span class="glyphicon glyphicon-ok-sign" ></span>
+            </div>
+            <div class="col-xs-6 text-center" style="line-height:3">
+              领取成功
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!--modal get fail -->
+	<div class="modal fade in" id="getFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:230px" >
+      <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-1 text_red text-right" style="font-size:3rem" >
+              <span class="glyphicon glyphicon-remove-circle" ></span>
+            </div>
+            <div class="col-xs-6 text-center" style="line-height:3">
+              领取失败
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!--modal apply for backout successfully-->
+	<div class="modal fade in" id="backoutSuccessfully" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:230px" >
+      <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-1 text_green text-right" style="font-size:3rem" >
+              <span class="glyphicon glyphicon-ok-sign" ></span>
+            </div>
+            <div class="col-xs-6 text-center" style="line-height:3">
+              退领成功
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!--modal apply for backout fail -->
+	<div class="modal fade in" id="backoutFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:230px" >
+      <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-1 text_red text-right" style="font-size:3rem" >
+              <span class="glyphicon glyphicon-remove-circle" ></span>
+            </div>
+            <div class="col-xs-6 text-center" style="line-height:3">
+              退领失败
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!--modal distribute successfully -->
+	<div class="modal fade in" id="distributeSuccessfully" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:230px" >
+      <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-1 text_green text-right" style="font-size:3rem" >
+              <span class="glyphicon glyphicon-ok-sign" ></span>
+            </div>
+            <div class="col-xs-6 text-center" style="line-height:3">
+              分配成功
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!--modal distribute fail -->
+	<div class="modal fade in" id="distributeFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:230px" >
+      <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-1 text_red text-right" style="font-size:3rem" >
+              <span class="glyphicon glyphicon-remove-circle" ></span>
+            </div>
+            <div class="col-xs-6 text-center" style="line-height:3">
+              分配失败
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<!--modal apply for backout -->
+	<div class="modal fade" id="backout" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+      	<div class="modal-header bg_primary">
+		    	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		      <h4 class="modal-title text_white text-center" id="">请求退领</h4>
+	      </div>
+      	<div class="modal-body">
+        	<form class="form-horizontal">
+        		<div class="form-group">
+        			<label class="col-sm-3 control-label">商户名称：</label>
+        			<div class="col-sm-8">
+          		<input type="text" class="form-control" placeholder="系统自动获取">
+        			</div>
+        		</div>
+        		<div class="form-group">
+        			<label class="col-sm-3 control-label"><span class="red"> * </span>被请求人：</label>
+        			<div class="col-sm-8">
+	          		<select class="form-control" name="" id="">
+	          			<option value="">请选择</option>
+	          		</select>
+        			</div>
+        		</div>
+        		<div class="form-group">
+        			<label class="col-sm-3 control-label"><span class="red"> * </span>抄送给：</label>
+        			<div class="col-sm-8">
+          		  <select class="form-control" name="" id="">
+	          			<option value="">请选择</option>
+	          		</select>
+        			</div>
+        		</div>
+        		<div class="form-group">
+        			<label class="col-sm-3 control-label"><span class="red"> * </span>紧急程度：</label>
+        			<div class="col-sm-8">
+          		  <select class="form-control" name="" id="">
+	          			<option value="">请选择</option>
+	          		</select>
+        			</div>
+        		</div>
+        		<div class="form-group">
+        			<label class="col-sm-3 control-label"><span class="red"> * </span>请求原因：</label>
+        			<div class="col-sm-8">
+	        			<textarea class="form-control" name="" id="" cols="30" rows="3"></textarea>
+        			</div>
+        		</div>
+        	</form>
+      	</div>
+      	<div class="modal-footer">
+        	<div class="col-sm-3 col-sm-offset-2">
+	        	<button type="button" class="btn bg_primary btn-block margin-r65 text_white" data-toggle="modal" data-target="#backoutSuccessfully" data-backdrop="false" data-dismiss="modal">确定</button>
+	        </div>
+	        <div class="col-sm-3 col-sm-offset-2">	
+	        	<button type="button" class="btn bg_gray btn-block text_white" data-dismiss="modal">取消</button>
+        	</div>
+      	</div>
+	    </div>
+		</div>
+	</div>
+	<!--modal distribution -->
+	<div class="modal fade" id="distribution" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog" role="document">
+	    <div class="modal-content">
+      	<div class="modal-header bg_primary">
+		    	<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		      <h4 class="modal-title text_white text-center" id="">分配</h4>
+	      </div>
+      	<div class="modal-body">
+        	<form class="form-horizontal">
+        		<div class="form-group">
+        			<label class="col-sm-3 control-label">分配给：</label>
+        			<div class="col-sm-4">
+          			<select class="form-control" name="" id="">
+	          			<option value="">部门</option>
+	          		</select>
+        			</div>
+        			<div class="col-sm-4">
+          			<select class="form-control" name="" id="">
+	          			<option value="">人员</option>
+	          		</select>
+        			</div>
+        		</div>
+        	</form>
+      	</div>
+      	<div class="modal-footer">
+        	<div class="col-sm-3 col-sm-offset-2">
+	        	<button type="button" class="btn bg_primary btn-block margin-r65 text_white" data-toggle="modal" data-target="#distributeSuccessfully" data-backdrop="false" data-dismiss="modal">确定</button>
+	        </div>
+	        <div class="col-sm-3 col-sm-offset-2">	
+	        	<button type="button" class="btn bg_gray btn-block text_white" data-dismiss="modal">取消</button>
+        	</div>
+      	</div>
+	    </div>
+		</div>
+	</div>
+
+    
+</body>
+<script type="text/javascript">
+   	$(document).ready(function() {
+	    $('#reservationtime').daterangepicker({
+	    	timePicker: true,
+	        timePickerIncrement: 30,
+	        format: 'MM/DD/YYYY'
+	    }, function(start, end, label) {
+	        console.log(start.toISOString(), end.toISOString(), label);
+	    });
+	});
+
+	$(function () {
+    $("[data-toggle='tooltip']").tooltip(); 
+
+    $('#inportSuccessfully').on('shown.bs.modal', function () {
+    	setTimeout(function(){$("#inportSuccessfully").modal("hide")},1000);
+    });
+    $('#inportFail').on('shown.bs.modal', function () {
+   	 setTimeout(function(){$("#inportFail").modal("hide")},1000);
+    });
+    $('#getSuccessfully').on('shown.bs.modal', function () {
+    	setTimeout(function(){$("#getSuccessfully").modal("hide")},1000);
+    });
+    $('#getFail').on('shown.bs.modal', function () {
+    	setTimeout(function(){$("#getFail").modal("hide")},1000);
+    });
+    $('#backoutSuccessfully').on('shown.bs.modal', function () {
+    	setTimeout(function(){$("#backoutSuccessfully").modal("hide")},1000);
+    });
+    $('#backoutFail').on('shown.bs.modal', function () {
+   	 setTimeout(function(){$("#backoutFail").modal("hide")},1000);
+    });
+    $('#distributeSuccessfully').on('shown.bs.modal', function () {
+   	 setTimeout(function(){$("#distributeSuccessfully").modal("hide")},1000);
+    });
+    $('#distributeFail').on('shown.bs.modal', function () {
+   	 setTimeout(function(){$("#distributeFail").modal("hide")},1000);
+    });
+
+
 
 		$('#mystore').on('click', function () {
 			var $btn = $(this).button('loading')
 		    // business logic...
 		    $btn.button('reset')
 		})
-   	</script>
-</body>
+
+    });
+</script>
 </html>

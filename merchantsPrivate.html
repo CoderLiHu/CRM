@@ -19,613 +19,654 @@
     <script src="js/bootstrap.min.js"></script>
   </head>
   <body>
-     <!-- headbar -->
-  <nav class="navbar navbar-crm navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a href="index.html"><img class="logo_pad" src="img/index_logo.png" alt="销售CRM系统"></span></a>
-      </div>
+    <!-- headbar -->
+    <nav class="navbar navbar-crm navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="index.html"><img class="logo_pad" src="img/index_logo.png" alt="销售CRM系统"></span></a>
+        </div>
 
-      <!-- alert -->
-      <div class="alert alert-warning alert-dismissible fade in alert1  hidden">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        您今天收到10个系统注册消息，去激活（点击跳转到后台->成员管理页面）
-      </div>
+        <!-- alert -->
+        <div class="alert alert-warning alert-dismissible fade in alert1  hidden">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          您今天收到10个系统注册消息，去激活（点击跳转到后台->成员管理页面）
+        </div>
 
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="#" class="thumbnail" id="user_bg">某人</a>
-          </li>
-          <li>
-            <div class="sanj dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="caret"></span>
-            </div>
-            <ul class="dropdown-menu">
-              <li><a href="login.html">退出系统</a></li>
-            </ul>
-          </li>
-        </ul>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#" class="thumbnail" id="user_bg">某人</a>
+            </li>
+            <li>
+              <div class="sanj dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="caret"></span>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a href="login.html">退出系统</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
+    </nav>
+
+    <!-- navbar -->
+    <div class="left_bar sidebar pad-none">
+      <ul class="leftbar_list">
+        <li>
+          <div class="list_title" onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
+        </li>
+        <li>
+          <div class="list_title" data-toggle="collapse" href="#ListG1"><i class="iconfont">&#xe601;</i>商户资源<span><img src="img/downarrow.png"></span></div>
+          <ul id="ListG1" class="list_panel collapse in">
+            <li><a href="merPublic.html">公海商户库</a></li>
+            <li><a href="typein.html">商户信息录入</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="list_title active1" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
+          <ul id="ListG2" class="list_panel collapse in">
+            <li><a href="merchantsPrivate.html" class="active">私海商户库</a></li>
+            <li><a href="myVisits.html">我的拜访</a></li>
+            <li><a href="#">款项核实</a></li>
+            <li><a href="#">上单</a></li>
+          </ul>
+        </li>
+        <li>
+        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
+          <ul id="ListG3" class="list_panel collapse in">
+            <li><a href="#">我的消息</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-  </nav>
 
-  <!-- navbar -->
-  <div class="left_bar sidebar pad-none">
-    <ul class="leftbar_list">
-      <li>
-        <div class="list_title" onclick="location='index.html'"><i class="iconfont">&#xe600;</i>首页<span></div>
-      </li>
-      <li>
-        <div class="list_title" data-toggle="collapse" href="#ListG1"><i class="iconfont">&#xe601;</i>商户资源<span><img src="img/downarrow.png"></span></div>
-        <ul id="ListG1" class="list_panel collapse in">
-          <li><a href="merPublic.html">公海商户库</a></li>
-          <li><a href="typein.html">商户信息录入</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="list_title active1" data-toggle="collapse" href="#ListG2"><i class="iconfont">&#xe602;</i>销售中心<span><img src="img/downarrow.png" alt=""></span></div>
-        <ul id="ListG2" class="list_panel collapse in">
-          <li><a href="merchantsPrivate.html" class="active">私海商户库</a></li>
-          <li><a href="myVisits.html">我的拜访</a></li>
-          <li><a href="#">款项核实</a></li>
-          <li><a href="#">上单</a></li>
-        </ul>
-      </li>
-      <li>
-      <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
-        <ul id="ListG3" class="list_panel collapse in">
-          <li><a href="#">我的消息</a></li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <!-- content -->
-  <div class="right_bar pad-none">
-        <div class="row">
-          <div class="col-sm-12">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <div class="row">
-                    <div class="col-xs-6 col-lg-9">
-                      <h3 class="boright">私海商户</h3>
-                    </div>
-                    <div class="col-xs-6 col-lg-3">
-                      <div class="input-group">
-                        <input type="text" class="form-control" placeholder="请输入商户名称进行查询">
-                        <span class="input-group-btn">
-                          <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                        </span>
+    <!-- content -->
+    <div class="right_bar pad-none">
+          <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <div class="row">
+                      <div class="col-xs-6 col-lg-9">
+                        <h3 class="boright">私海商户</h3>
+                      </div>
+                      <div class="col-xs-6 col-lg-3">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="请输入商户名称进行查询">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="pane-body pubilc_pad">
-                  <!-- typein formgroup -->
-                  <form class="form-inline">
-                    <div class="row ">
-                      <div class="col-sm-7">
-                        <div class="form-group pull-right">
-                          <label for="calendar">时间：</label>
-                          <div class="input-group " id="calendar">
-                            <span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
-                            <input type="text" style="width: 200px" name="reservation" id="reservationtime" class="form-control" value="08/01/2013 - 08/01/2013"  class="span4"/>
+                  <div class="pane-body pubilc_pad">
+                    <!-- typein formgroup -->
+                    <form class="form-inline">
+                      <div class="row ">
+                        <div class="col-sm-7">
+                          <div class="form-group pull-right">
+                            <label for="calendar">时间：</label>
+                            <div class="input-group " id="calendar">
+                              <span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
+                              <input type="text"  name="reservation" id="reservationtime" class="form-control" value="08/01/2013 - 08/01/2013"  class="span4"/>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-sm-5">
-                        <div class="form-group pull-right">
-                          <div class="btn-group">
-                            <label for="calendar">商户状态：</label>
+                        <div class="col-sm-5">
+                          <div class="form-group pull-right">
+                            <div class="btn-group">
+                              <label >商户状态：</label>
                               <select id="disabledSelect" class="form-control">
                                 <option>全部</option>
-                                  <option>未分配</option>
-                                  <option>未拜访</option>
-                                  <option>未签约</option>
+                                <option>未分配</option>
+                                <option>未拜访</option>
+                                <option>未签约</option>
                               </select>
+                            </div>
+                          </div>  
+                        </div>
+                      </div>
+                    </form>
+                    <div class="line"></div>
+                    <div class="store ">
+                      <!-- storetable title -->
+                      <div class="store_title">
+                        <form class="form-inline">
+                          <div class="checkbox margin-r15">
+                            <label>
+                              <input type="checkbox" value="">&nbsp;&nbsp;全选
+                            </label>
                           </div>
-                        </div>  
+                          <div class="form-group">
+                              <button class="btn btn-sm btn-white btn-equalwidth" type="button" data-toggle="modal" data-target="#batchVisit" data-backdrop="false">批量拜访</button>
+                          </div>
+                          <div class="form-group">
+                              <button class="btn btn-sm btn-white btn-equalwidth">批量放弃</button>
+                          </div>
+                          <div class="form-group pull-right margin-t5"  data-toggle="modal" data-target="#exportSuccessfully" data-backdrop="false">
+                            <button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip"  data-placement="top" title="导出"><span class="glyphicon glyphicon-download-alt text_big"></span></button>
+                            商户数目：0/1256
+                          </div>
+                        </form>
+                      </div>
+                      <!-- store table -->
+                      <div class="store_form">
+                        <table class="table table-bordered">
+                          <tr class="active text-center">
+                            <th></th>
+                            <th>商户编号</th>
+                            <th>入库时间</th>
+                            <th>商户名称</th>
+                            <th>商户分类</th>
+                            <th>联系电话</th>
+                            <th>省/市</th>
+                            <th>区/县</th>
+                            <th>商圈</th>
+                            <th>详细地址</th>
+                            <th class="col-sm-1">状态</th>
+                            <th class="col-sm-1">操作</th>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="checkbox" value="">
+                            </td>
+                            <td>Noo1</td>
+                            <td>2016-06-14</td>
+                            <td>鹿港小镇（西直门店）</td>
+                            <td>台湾菜</td>
+                            <td>189********</td>
+                            <td>北京市</td>
+                            <td>西城区</td>
+                            <td>西直门/动物园</td>
+                            <td>北京市西城区西直门xx街道xx号</td>
+                            <td><span class="tag bg_green">已拜访</span></td>
+                            <td>
+                              <button type="button" class="btn btn-info btn-xs btn-block">拜访</button>
+                              <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
+                              <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="checkbox" value="">
+                            </td>
+                            <td>Noo1</td>
+                            <td>2016-06-14</td>
+                            <td>鹿港小镇（西直门店）</td>
+                            <td>台湾菜</td>
+                            <td>189********</td>
+                            <td>北京市</td>
+                            <td>西城区</td>
+                            <td>西直门/动物园</td>
+                            <td>北京市西城区西直门xx街道xx号</td>
+                            <td><span class="tag bg_brown">未拜访</span></td>
+                            <td>
+                              <div class="input-group margin5" id="calendar">
+                                <input type="text" style="width: 100px" name="reservation" id="reservationtime" class="form-control text_small" value="10/01/2016"  class="span4"/>
+                                <span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
+                              </div>
+                              <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
+                              <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <input type="checkbox" value="">
+                            </td>
+                            <td>Noo1</td>
+                            <td>2016-06-14</td>
+                            <td>鹿港小镇（西直门店）</td>
+                            <td>台湾菜</td>
+                            <td>189********</td>
+                            <td>北京市</td>
+                            <td>西城区</td>
+                            <td>西直门/动物园</td>
+                            <td>北京市西城区西直门xx街道xx号</td>
+                            <td><span class="tag bg_yellow">已签约</span></td>
+                            <td>
+                              <p type="button" class="text-center text_small">已预约（明日）2016/10/11拜访</p>
+                              <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
+                              <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                      <div class="store_foot"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+          </div>
+    </div>
+    
+    <!-- Modal batchVisit-->
+    <div class="modal fade in" id="batchVisit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="width:330px" >
+        <div class="modal-content bg_black text_white" style="width:330px; padding:20px">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-2 text_green" style="font-size:3rem" >
+                <span class="glyphicon glyphicon-ok-sign" ></span>
+              </div>
+              <div class="col-xs-10">
+                您已成功添加商戶到我的拜访，现在就去<a class="link" href="myVisits.html">添加拜访详情</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal giveUp -->
+    <div class="modal fade" id="giveUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="width:300px">
+        <div class="modal-content" style="width:300px;padding:15px">
+          <div class="modal-body">
+            <p>资源放弃后可能会被其他成员领取，你确定放弃吗？</p>
+          </div>
+          <div class="row">
+            <div class="col-xs-6">
+              <button type="button" class="btn bg_blue btn-equalwidth pull-right" data-dismiss="modal">确定</button>
+            </div>
+            <div class="col-xs-6">
+              <button type="button" class="btn bg_gray btn-equalwidth" data-dismiss="modal" > 取消</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--modal export successfully -->
+    <div class="modal fade in" id="exportSuccessfully" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="width:230px" >
+        <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-3 col-xs-offset-1 text_green text-right" style="font-size:3rem" >
+                <span class="glyphicon glyphicon-ok-sign" ></span>
+              </div>
+              <div class="col-xs-6 text-center" style="line-height:3">
+                导入成功
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--madal export fail -->
+    <div class="modal fade in" id="exportFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="width:230px" >
+        <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-xs-3 col-xs-offset-1 text_red text-right" style="font-size:3rem" >
+                <span class="glyphicon glyphicon-remove-circle" ></span>
+              </div>
+              <div class="col-xs-6 text-center" style="line-height:3">
+                导入失败
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal checkMerchant -->
+    <div class="modal fade" id="checkMerchant" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog width900 height700 overflowy-scroll" style="margin:70px auto">
+        <div class="modal-content" >
+          <div class="modal-header bg_primary">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title text-center text_white text_bold" id="myModalLabel">商户详情</h4>
+          </div>
+          <div class="modal-body text_small">
+            <!-- merchant basic record -->
+            <div class="container-fluid ch-list">
+              <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">商户基本档案</div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="form-group">
+                    <label  class="control-label" for="ckName"><span class="red"> * </span>商户名称</label>
+                    <input class="form-control" id="ckName" type="text" value="奶茶爱上粉" disabled>
+                  </div>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1">
+                  <div class="form-group">
+                    <label class="control-label" for="ckActivities"><span class="red"> * </span>商户业态</label>
+                    <select class="form-control" id="ckActivities" type="select" disabled>
+                      <option value="其他" selected="selected">其他</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1">
+                  <div class="form-group">
+                    <label class="control-label" for="ckMultiple"><span class="red"> * </span>连锁类型</label>
+                    <select class="form-control" id="ckMultiple" type="select" disabled>
+                      <option value="加盟连锁" selected="selected">加盟连锁</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="form-group">
+                    <label class="control-label" for="ckLabel"><span class="red"> * </span>商户标签</label>
+                    <div class="row">
+                      <div class="col-xs-10">
+                        <select class="form-control" id="ckLabel" type="select" disabled>
+                          <option value="1类">1类</option>
+                          <option value="2类" selected="selected">2类</option>
+                          <option value="3类">3类</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-2 pad-none">
+                        <p class="form-control-static"><span class="glyphicon glyphicon-question-sign text_gray text_large"></span></p>
                       </div>
                     </div>
-                  </form>
-                  <div class="line"></div>
-                  <div class="store ">
-                      <!-- storetable title -->
-                    <div class="store_title">
-                      <form class="form-inline">
-                        <div class="checkbox margin-r15">
-                          <label>
-                            <input type="checkbox" value="">&nbsp;&nbsp;全选
-                          </label>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-sm btn-white btn-equalwidth" type="button" data-toggle="modal" data-target="#batchVisit" data-backdrop="false">批量拜访</button>
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-sm btn-white btn-equalwidth">批量放弃</button>
-                        </div>
-                        <div class="form-group pull-right margin-t5">
-                          <button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip"  data-placement="top" title="导出"><span class="glyphicon glyphicon-download-alt text_big"></span></button>
-                          商户数目：0/1256
-                        </div>
-                      </form>
+                  </div>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1">
+                  <div class="form-group">
+                    <label class="control-label" for="ckRank">商户等级</label>
+                    <div class="row">
+                      <div class="col-xs-10">
+                        <select class="form-control" id="ckRank" type="select" disabled>
+                          <option value="A">A</option>
+                          <option value="B" selected="selected">B</option>
+                          <option value="C">C</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-2 pad-none">
+                        <p class="form-control-static"><span class="glyphicon glyphicon-question-sign text_gray text_large"></span></p>
+                      </div>
                     </div>
-                    <!-- store table -->
-                    <div class="store_form">
-                      <table class="table table-bordered">
-                        <tr class="active text-center">
-                          <th></th>
-                          <th>商户编号</th>
-                          <th>入库时间</th>
-                          <th>商户名称</th>
-                          <th>商户分类</th>
-                          <th>联系电话</th>
-                          <th>省/市</th>
-                          <th>区/县</th>
-                          <th>商圈</th>
-                          <th>详细地址</th>
-                          <th class="col-sm-1">状态</th>
-                          <th class="col-sm-1">操作</th>
-                        </tr>
-                        <tr>
-                          <td>
-                            <input type="checkbox" value="">
-                          </td>
-                          <td>Noo1</td>
-                          <td>2016-06-14</td>
-                          <td>鹿港小镇（西直门店）</td>
-                          <td>台湾菜</td>
-                          <td>189********</td>
-                          <td>北京市</td>
-                          <td>西城区</td>
-                          <td>西直门/动物园</td>
-                          <td>北京市西城区西直门xx街道xx号</td>
-                          <td><span class="tag bg_green">已拜访</span></td>
-                          <td>
-                            <button type="button" class="btn btn-info btn-xs btn-block">拜访</button>
-                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
-                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <input type="checkbox" value="">
-                          </td>
-                          <td>Noo1</td>
-                          <td>2016-06-14</td>
-                          <td>鹿港小镇（西直门店）</td>
-                          <td>台湾菜</td>
-                          <td>189********</td>
-                          <td>北京市</td>
-                          <td>西城区</td>
-                          <td>西直门/动物园</td>
-                          <td>北京市西城区西直门xx街道xx号</td>
-                          <td><span class="tag bg_brown">未拜访</span></td>
-                          <td>
-                            <div class="input-group margin5" id="calendar">
-                              <input type="text" style="width: 100px" name="reservation" id="reservationtime" class="form-control text_small" value="10/01/2016"  class="span4"/>
-                              <span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
-                            </div>
-                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
-                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <input type="checkbox" value="">
-                          </td>
-                          <td>Noo1</td>
-                          <td>2016-06-14</td>
-                          <td>鹿港小镇（西直门店）</td>
-                          <td>台湾菜</td>
-                          <td>189********</td>
-                          <td>北京市</td>
-                          <td>西城区</td>
-                          <td>西直门/动物园</td>
-                          <td>北京市西城区西直门xx街道xx号</td>
-                          <td><span class="tag bg_yellow">已签约</span></td>
-                          <td>
-                            <p type="button" class="text-center text_small">已预约（明日）2016/10/11拜访</p>
-                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
-                            <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
-                          </td>
-                        </tr>
+                  </div>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1">
+                  <div class="form-group">
+                    <label class="control-label" for="ckNumber">门店数</label>
+                    <input class="form-control" id="ckNumber" type="text" value="100" disabled>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <label class="control-label"><span class="red"> * </span>地址：</label>
+                    <div class="form-inline">
+                      <select class="form-control margin-r20" disabled>
+                        <option value="请选择商户分类">省/市</option>
+                        <option value="商户分类1">北京市</option>
+                        <option value="商户分类2">上海市</option>
+                      </select>
+                      <select class="form-control margin-r20" disabled>
+                        <option value="请选择商户分类">市</option>
+                        <option value="商户分类1">北京市</option>
+                      </select>
+                      <select class="form-control margin-r20" disabled>
+                        <option value="请选择商户分类">区/县</option>
+                        <option value="商户分类1">1</option>
+                        <option value="商户分类2">2</option>
+                        <option value="商户分类3">3</option>
+                      </select>
+                      <select class="form-control margin-r20"  disabled>
+                        <option value="请选择商户分类">商圈/街道</option>
+                        <option value="商户分类1">北京市</option>
+                      </select>
+                      <input type="text" class="form-control" placeholder="请输入具体地址" disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="form-group">
+                    <label class="control-label" for="ckContacts"><span class="red"> * </span>联系人</label>
+                    <div class="text_gray">
+                      <table class="table table-striped">
+                        <tbody>
+                          <tr>
+                            <td>Frank<span class="glyphicon glyphicon-flag text_blue text_big padleft5" ></span></td>
+                            <td>经理负责人</td>
+                            <td>189817213217</td>
+                            <td>189817213</td>
+                            <td>最后更新：司马相如 2016/06/21 10:38</td>
+                          </tr> 
+                        </tbody>
                       </table>
                     </div>
-                    <div class="store_foot"></div>
                   </div>
+                </div>
               </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <label class="control-label"><span class="red"> * </span>是否有人正在使用餐饮系统</label>
+                    <div class="row">
+                      <label class="col-xs-3 control-label">
+                        <input type="radio" name="ifUsing" value=""> 是
+                      </label>
+                      <label class="col-xs-3 control-label">
+                        <input type="radio" name="ifUsing" value=""> 否
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <div class="form-group">
+                    <label class="control-label" for="ckBrand">系统品牌</label>
+                    <input class="form-control" id="ckBrand" type="text" value="归到" disabled>
+                  </div>
+                </div>
               </div>
-          </div>
-        </div>
-  </div>
-  
-  <!-- Modal batchVisit-->
-  <div class="modal fade in" id="batchVisit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" style="width:330px" >
-      <div class="modal-content bg_black text_white" style="width:330px; padding:20px">
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-xs-2 text_green" style="font-size:3rem" >
-              <span class="glyphicon glyphicon-ok-sign" ></span>
             </div>
-            <div class="col-xs-10">
-              您已成功添加商戶到我的拜访，现在就去<a class="link" href="myVisits.html">添加拜访详情</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal giveUp -->
-  <div class="modal fade" id="giveUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" style="width:300px">
-      <div class="modal-content" style="width:300px;padding:15px">
-        <div class="modal-body">
-          <p>资源放弃后可能会被其他成员领取，你确定放弃吗？</p>
-        </div>
-        <div class="row">
-          <div class="col-xs-6">
-            <button type="button" class="btn bg_blue btn-equalwidth pull-right" data-dismiss="modal">确定</button>
-          </div>
-          <div class="col-xs-6">
-            <button type="button" class="btn bg_gray btn-equalwidth" data-dismiss="modal" > 取消</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Modal checkMerchant -->
-  <div class="modal fade" id="checkMerchant" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog width900 height700 overflowy-scroll" style="margin:70px auto">
-      <div class="modal-content" >
-        <div class="modal-header bg_primary">
-          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-          <h4 class="modal-title text-center text_white text_bold" id="myModalLabel">商户详情</h4>
-        </div>
-        <div class="modal-body text_small">
-          <!-- merchant basic record -->
-          <div class="container-fluid ch-list">
-            <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">商户基本档案</div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="form-group">
-                  <label  class="control-label" for="ckName"><span class="red"> * </span>商户名称</label>
-                  <input class="form-control" id="ckName" type="text" value="奶茶爱上粉" disabled>
+            <!-- merchant followup -->
+            <div class="container-fluid ch-list">
+              <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">商户跟进情况</div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="form-group">
+                    <label class="control-label" for="ckNeed">商户需求</label>
+                    <input class="form-control" id="ckNeed" type="text" value="点餐系统" disabled>
+                  </div>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1">
+                  <div class="form-group">
+                    <label class="control-label" for="ckStatus">项目状态</label>
+                    <select class="form-control" id="ckStatus" type="select" disabled>
+                      <option value="已拜访" selected="selected">已拜访</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-              <div class="col-xs-3 col-xs-offset-1">
-                <div class="form-group">
-                  <label class="control-label" for="ckActivities"><span class="red"> * </span>商户业态</label>
-                  <select class="form-control" id="ckActivities" type="select" disabled>
-                    <option value="其他" selected="selected">其他</option>
-                  </select>
+              <div class="row">
+                <div class="col-xs-2">
+                  <div class="form-group">
+                    <label class="control-label" for="ckTime"><span class="red"> * </span>拜访次数</label>
+                    <input class="form-control" id="ckTime" type="text" value="1" disabled>
+                  </div>
                 </div>
-              </div>
-              <div class="col-xs-3 col-xs-offset-1">
-                <div class="form-group">
-                  <label class="control-label" for="ckMultiple"><span class="red"> * </span>连锁类型</label>
-                  <select class="form-control" id="ckMultiple" type="select" disabled>
-                    <option value="加盟连锁" selected="selected">加盟连锁</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="form-group">
-                  <label class="control-label" for="ckLabel"><span class="red"> * </span>商户标签</label>
-                  <div class="row">
-                    <div class="col-xs-10">
-                      <select class="form-control" id="ckLabel" type="select" disabled>
-                        <option value="1类">1类</option>
-                        <option value="2类" selected="selected">2类</option>
-                        <option value="3类">3类</option>
-                      </select>
-                    </div>
-                    <div class="col-xs-2 pad-none">
-                      <p class="form-control-static"><span class="glyphicon glyphicon-question-sign text_gray text_large"></span></p>
+                <div class="col-xs-5 col-xs-offset-3">
+                  <div class="form-group">
+                    <label class="control-label" for="ckAppointment">预约下次拜访</label>
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <select class="form-control" disabled>
+                          <option value="拜访日期">拜访日期</option>
+                        </select>
+                      </div>
+                      <div class="col-xs-6">
+                        <select class="form-control" disabled>
+                          <option value="时刻">时刻</option>
+                        </select>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-xs-3 col-xs-offset-1">
-                <div class="form-group">
-                  <label class="control-label" for="ckRank">商户等级</label>
-                  <div class="row">
-                    <div class="col-xs-10">
-                      <select class="form-control" id="ckRank" type="select" disabled>
-                        <option value="A">A</option>
-                        <option value="B" selected="selected">B</option>
-                        <option value="C">C</option>
-                      </select>
-                    </div>
-                    <div class="col-xs-2 pad-none">
-                      <p class="form-control-static"><span class="glyphicon glyphicon-question-sign text_gray text_large"></span></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xs-3 col-xs-offset-1">
-                <div class="form-group">
-                  <label class="control-label" for="ckNumber">门店数</label>
-                  <input class="form-control" id="ckNumber" type="text" value="100" disabled>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="form-group">
-                  <label class="control-label"><span class="red"> * </span>地址：</label>
-                  <div class="form-inline">
-                    <select class="form-control margin-r20" disabled>
-                      <option value="请选择商户分类">省/市</option>
-                      <option value="商户分类1">北京市</option>
-                      <option value="商户分类2">上海市</option>
-                    </select>
-                    <select class="form-control margin-r20" disabled>
-                      <option value="请选择商户分类">市</option>
-                      <option value="商户分类1">北京市</option>
-                    </select>
-                    <select class="form-control margin-r20" disabled>
-                      <option value="请选择商户分类">区/县</option>
-                      <option value="商户分类1">1</option>
-                      <option value="商户分类2">2</option>
-                      <option value="商户分类3">3</option>
-                    </select>
-                    <select class="form-control margin-r20"  disabled>
-                      <option value="请选择商户分类">商圈/街道</option>
-                      <option value="商户分类1">北京市</option>
-                    </select>
-                    <input type="text" class="form-control" placeholder="请输入具体地址" disabled>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="form-group">
-                  <label class="control-label" for="ckContacts"><span class="red"> * </span>联系人</label>
-                  <div class="text_gray">
-                    <table class="table table-striped">
+              <div class="row">
+                <div class="col-xs-11">
+                  <label class="control-label" for="ckVisitedResult">拜访结果:</label>
+                  <div class="border1 overflowy-scroll height_m padding5" id="ckVisitedResult">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>拜访时间</th>
+                          <th>拜访方式</th>
+                          <th>拜访目的</th>
+                          <th class="width300">拜访结果</th>
+                        </tr>
+                      </thead>
                       <tbody>
                         <tr>
-                          <td>Frank<span class="glyphicon glyphicon-flag text_blue text_big padleft5" ></span></td>
-                          <td>经理负责人</td>
-                          <td>189817213217</td>
-                          <td>189817213</td>
-                          <td>最后更新：司马相如 2016/06/21 10:38</td>
-                        </tr> 
+                          <td>2016/10/01</td>
+                          <td>电话拜访</td>
+                          <td>谈需求</td>
+                          <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                        </tr>
+                        <tr>
+                          <td>2016/10/01</td>
+                          <td>电话拜访</td>
+                          <td>谈需求</td>
+                          <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                        </tr>
+                        <tr>
+                          <td>2016/10/01</td>
+                          <td>电话拜访</td>
+                          <td>谈需求</td>
+                          <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-xs-6">
-                <div class="form-group">
-                  <label class="control-label"><span class="red"> * </span>是否有人正在使用餐饮系统</label>
-                  <div class="row">
-                    <label class="col-xs-3 control-label">
-                      <input type="radio" name="ifUsing" value=""> 是
-                    </label>
-                    <label class="col-xs-3 control-label">
-                      <input type="radio" name="ifUsing" value=""> 否
-                    </label>
+
+            <!--  Great customer projects -->
+            <div class="container-fluid ch-list margin-t20">
+              <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">大客户项目面板</div>
+              <div class="row">
+                <div class="col-xs-3">
+                  <div class="form-group">
+                    <label class="control-label" for="ckSaler">售前顾问</label>
+                    <input class="form-control" id="ckSaler" type="text" value="张三丰" disabled>
+                  </div>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1">
+                  <div class="form-group">
+                    <label class="control-label" for="ckManager">技术顾问(项目经理)</label>
+                    <input class="form-control" id="ckManager" type="text" value="张无忌" disabled>
+                  </div>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1">
+                  <div class="form-group">
+                    <label class="control-label" for="ckSaler">其他顾问</label>
+                    <input class="form-control" id="ckSaler" type="text" value="周芷若" disabled>
+                  </div>
+                </div>
+              </div>            
+              <div class="row">
+                <div class="col-xs-3">
+                  <div class="form-group">
+                    <label class="control-label" for="ckBargain">成交概率</label>
+                    <input class="form-control" id="ckBargain" type="text" value="10%" disabled>
+                  </div>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1">
+                  <div class="form-group">
+                    <label class="control-label" for="ckMoney">预计合同金额</label>
+                    <input class="form-control" id="ckMoney" type="text" value="￥10000" disabled>
+                  </div>
+                </div>
+                <div class="col-xs-3 col-xs-offset-1">
+                  <div class="form-group">
+                    <label class="control-label" for="ckDate">预计成单日期</label>
+                    <select class="form-control" id="ckDate" disabled>
+                      <option value="拜访日期">拜访日期</option>
+                    </select>
                   </div>
                 </div>
               </div>
-              <div class="col-xs-4">
-                <div class="form-group">
-                  <label class="control-label" for="ckBrand">系统品牌</label>
-                  <input class="form-control" id="ckBrand" type="text" value="归到" disabled>
+              <div class="row">
+                <div class="col-xs-11">
+                  <label class="control-label" for="ckRemarks">备注:</label>
+                  <textarea id="ckRemarks" class="form-control" rows="6" maxlength="200" disabled></textarea>   
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- merchant followup -->
-          <div class="container-fluid ch-list">
-            <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">商户跟进情况</div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="form-group">
-                  <label class="control-label" for="ckNeed">商户需求</label>
-                  <input class="form-control" id="ckNeed" type="text" value="点餐系统" disabled>
-                </div>
-              </div>
-              <div class="col-xs-3 col-xs-offset-1">
-                <div class="form-group">
-                  <label class="control-label" for="ckStatus">项目状态</label>
-                  <select class="form-control" id="ckStatus" type="select" disabled>
-                    <option value="已拜访" selected="selected">已拜访/option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-2">
-                <div class="form-group">
-                  <label class="control-label" for="ckTime"><span class="red"> * </span>拜访次数</label>
-                  <input class="form-control" id="ckTime" type="text" value="1" disabled>
-                </div>
-              </div>
-              <div class="col-xs-5 col-xs-offset-3">
-                <div class="form-group">
-                  <label class="control-label" for="ckAppointment">预约下次拜访</label>
-                  <div class="row">
-                    <div class="col-xs-6">
-                      <select class="form-control" disabled>
-                        <option value="拜访日期">拜访日期</option>
-                      </select>
+            <!-- after sale followup -->
+            <div class="container-fluid ch-list margin-t20">
+              <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">售后跟进情况</div>
+              <div class="row">
+                <div class="col-xs-4">
+                  <div class="form-group">
+                    <label class="control-label" for="ckBuied">已购买产品模块</label>
+                    <div class="margin15">
+                      <span class="buied_label">手机点菜宝</span>
+                      <span class="buied_label">微信餐厅</span>
                     </div>
-                    <div class="col-xs-6">
-                      <select class="form-control" disabled>
-                        <option value="时刻">时刻</option>
-                      </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <label class="control-label">是否可以二次销售</label>
+                    <div class="row">
+                      <label class="col-xs-3 control-label">
+                        <input type="radio" name="ifUsingTwice" value=""> 是
+                      </label>
+                      <label class="col-xs-3 control-label">
+                        <input type="radio" name="ifUsingTwice" value=""> 否
+                      </label>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-11">
-                <label class="control-label" for="ckVisitedResult">拜访结果:</label>
-                <div class="border1 overflowy-scroll height_m padding5" id="ckVisitedResult">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th>拜访时间</th>
-                        <th>拜访方式</th>
-                        <th>拜访目的</th>
-                        <th class="width300">拜访结果</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>2016/10/01</td>
-                        <td>电话拜访</td>
-                        <td>谈需求</td>
-                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
-                      </tr>
-                      <tr>
-                        <td>2016/10/01</td>
-                        <td>电话拜访</td>
-                        <td>谈需求</td>
-                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
-                      </tr>
-                      <tr>
-                        <td>2016/10/01</td>
-                        <td>电话拜访</td>
-                        <td>谈需求</td>
-                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!--  Great customer projects -->
-          <div class="container-fluid ch-list margin-t20">
-            <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">大客户项目面板</div>
-            <div class="row">
-              <div class="col-xs-3">
-                <div class="form-group">
-                  <label class="control-label" for="ckSaler">售前顾问</label>
-                  <input class="form-control" id="ckSaler" type="text" value="张三丰" disabled>
-                </div>
-              </div>
-              <div class="col-xs-3 col-xs-offset-1">
-                <div class="form-group">
-                  <label class="control-label" for="ckManager">技术顾问(项目经理)</label>
-                  <input class="form-control" id="ckManager" type="text" value="张无忌" disabled>
-                </div>
-              </div>
-              <div class="col-xs-3 col-xs-offset-1">
-                <div class="form-group">
-                  <label class="control-label" for="ckSaler">其他顾问</label>
-                  <input class="form-control" id="ckSaler" type="text" value="周芷若" disabled>
-                </div>
-              </div>
-            </div>            
-            <div class="row">
-              <div class="col-xs-3">
-                <div class="form-group">
-                  <label class="control-label" for="ckBargain">成交概率</label>
-                  <input class="form-control" id="ckBargain" type="text" value="10%" disabled>
-                </div>
-              </div>
-              <div class="col-xs-3 col-xs-offset-1">
-                <div class="form-group">
-                  <label class="control-label" for="ckMoney">预计合同金额</label>
-                  <input class="form-control" id="ckMoney" type="text" value="￥10000" disabled>
-                </div>
-              </div>
-              <div class="col-xs-3 col-xs-offset-1">
-                <div class="form-group">
-                  <label class="control-label" for="ckDate">预计成单日期</label>
-                  <select class="form-control" id="ckDate" disabled>
-                    <option value="拜访日期">拜访日期</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-11">
-                <label class="control-label" for="ckRemarks">备注:</label>
-                <textarea id="ckRemarks" class="form-control" rows="6" maxlength="200" disabled></textarea>   
-              </div>
-            </div>
-          </div>
-
-          <!-- after sale followup -->
-          <div class="container-fluid ch-list margin-t20">
-            <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">售后跟进情况</div>
-            <div class="row">
-              <div class="col-xs-4">
-                <div class="form-group">
-                  <label class="control-label" for="ckBuied">已购买产品模块</label>
-                  <div class="margin15">
-                    <span class="buied_label">手机点菜宝</span>
-                    <span class="buied_label">微信餐厅</span>
+                <div class="col-xs-4">
+                  <div class="form-group">
+                    <label class="control-label" for="ckNeedHelp">需要协助</label>
+                    <input class="form-control" id="ckNeedHelp" type="text" value="" disabled>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-6">
-                <div class="form-group">
-                  <label class="control-label">是否可以二次销售</label>
-                  <div class="row">
-                    <label class="col-xs-3 control-label">
-                      <input type="radio" name="ifUsingTwice" value=""> 是
-                    </label>
-                    <label class="col-xs-3 control-label">
-                      <input type="radio" name="ifUsingTwice" value=""> 否
-                    </label>
-                  </div>
+              <div class="row">
+                <div class="col-xs-11">
+                  <label class="control-label" for="ckUseStatus">使用情况:</label>
+                  <textarea id="ckUseStatus" class="form-control" rows="3" maxlength="200" disabled></textarea>   
                 </div>
-              </div>
-              <div class="col-xs-4">
-                <div class="form-group">
-                  <label class="control-label" for="ckNeedHelp">需要协助</label>
-                  <input class="form-control" id="ckNeedHelp" type="text" value="" disabled>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-11">
-                <label class="control-label" for="ckUseStatus">使用情况:</label>
-                <textarea id="ckUseStatus" class="form-control" rows="3" maxlength="200" disabled></textarea>   
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  
+    
 
   </body>
   <script>
-    $('#batchVisit').on('shown.bs.modal', function () {
-      setTimeout(function(){$("#batchVisit").modal("hide")},3000);
-    });
     $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
+        $('[data-toggle="tooltip"]').tooltip();
+        $('#exportSuccessfully').on('shown.bs.modal', function () {
+          setTimeout(function(){$("#exportSuccessfully").modal("hide")},1000);
+        });
+        $('#exportFail').on('shown.bs.modal', function () {
+          setTimeout(function(){$("#exportFail").modal("hide")},1000);
+        });
+        $('#batchVisit').on('shown.bs.modal', function () {
+          setTimeout(function(){$("#batchVisit").modal("hide")},3000);
+        });
     });
   </script>
 </html>
