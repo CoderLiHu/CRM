@@ -74,14 +74,13 @@
         <ul id="ListG2" class="list_panel collapse in">
           <li><a href="merchantsPrivate.html">私海商户库</a></li>
           <li><a href="myVisits.html">我的拜访</a></li>
-          <li><a href="#">款项核实</a></li>
-          <li><a href="#">上单</a></li>
         </ul>
       </li>
       <li>
-      <div class="list_title" data-toggle="collapse" href="#ListG3" aria-expanded="true" aria-controls="#ListG2"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
+      <div class="list_title" data-toggle="collapse" href="#ListG3" aria-expanded="true" aria-controls="#ListG2"><i class="iconfont">&#xe60f;</i>后台管理<span><img src="img/downarrow.png" alt=""></span></div>
         <ul id="ListG3" class="list_panel collapse in">
-          <li><a href="#">我的消息</a></li>
+          <li><a href="memberManagement.html">成员管理</a></li>
+          <li><a href="distribution.html">资源分配</a></li>
         </ul>
       </li>
     </ul>
@@ -190,7 +189,7 @@
         <!-- notice -->
         <div class="panel panel-default wait1">
           <div class="panel-heading2"><i class="iconfont">&#xe603;</i>公告栏</div>
-          <div class="panel-body">
+          <div class="panel-body" style="padding:15px">
             <p><b>管理员：</b>今日系统新增200个商户资源，请各销售自行前往认领</p>
           </div>
         </div>
@@ -205,10 +204,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <a class="btn btn-default">我的拜访
-            <span><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
-          </a>
-          <a class="btn btn-default">私海商户</a>
+          <a class="btn btn-default padright-none">我的拜访<span class="padding5">&times;</span></a>
+          <a class="btn btn-default padright-none">私海商户<span class="padding5">&times;</span></a>
         </div>
         <div class="modal-body">
           <form class="form-horizontal">
@@ -232,36 +229,13 @@
                 <label class="checkbox-inline">
                   <input type="checkbox" id="inlineCheckbox2" value="option2">我的拜访
                 </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" id="inlineCheckbox1" value="option1">我的报告
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" id="inlineCheckbox2" value="option2">款项核实
-                </label>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-sm-2 control-label"><strong>个人中心</strong></label>
-              <div class="col-sm-10">
-                <label class="checkbox-inline">
-                  <input type="checkbox" id="inlineCheckbox1" value="option1">我的消息
-                </label>
               </div>
             </div>
             <div class="form-group">
               <label class="col-sm-2 control-label"><strong>后台管理</strong></label>
               <div class="col-sm-10">
                 <label class="checkbox-inline">
-                  <input type="checkbox" id="inlineCheckbox1" value="option1">部门管理
-                </label>
-                <label class="checkbox-inline">
                   <input type="checkbox" id="inlineCheckbox2" value="option2">成员管理
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" id="inlineCheckbox1" value="option1">角色管理
-                </label>
-                <label class="checkbox-inline">
-                  <input type="checkbox" id="inlineCheckbox2" value="option2">职能管理
                 </label>
                 <label class="checkbox-inline">
                   <input type="checkbox" id="inlineCheckbox1" value="option1">资源分配
@@ -279,7 +253,7 @@
   </div>
 
   <!-- message notice -->
-  <div class="panel panel-default wait1 msg-notice" >
+  <div class="panel panel-default wait1 msg-notice hidden " >
     <div class="panel-heading2"><i class="iconfont">&#xe603;</i>消息提示<span class="text_white float-r margin-r10">×</span></div>
     <div class="panel-body" style="padding:15px">
       <p>有<span class="red">1</span>个公司通知,请注意<a href="">查看</a></p>

@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>我的拜访</title>
-
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-   <link rel="stylesheet" href="css/crm.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/crm.css">
+    <link rel="stylesheet" href="css/daterangepicker.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
   </head>
   <body>
     <!-- headbar -->
@@ -76,14 +77,13 @@
           <ul id="ListG2" class="list_panel collapse in">
             <li><a href="merchantsPrivate.html" class="active">私海商户库</a></li>
             <li><a href="myVisits.html">我的拜访</a></li>
-            <li><a href="#">款项核实</a></li>
-            <li><a href="#">上单</a></li>
           </ul>
         </li>
         <li>
-        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
+        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe60f;</i>后台管理<span><img src="img/downarrow.png" alt=""></span></div>
           <ul id="ListG3" class="list_panel collapse in">
-            <li><a href="#">我的消息</a></li>
+          <li><a href="memberManagement.html">成员管理</a></li>
+          <li><a href="distribution.html">资源分配</a></li>
           </ul>
         </li>
       </ul>
@@ -113,13 +113,11 @@
                     <!-- typein formgroup -->
                     <form class="form-inline">
                       <div class="row ">
-                        <div class="col-sm-7">
-                          <div class="form-group pull-right">
-                            <label for="calendar">时间：</label>
-                            <div class="input-group " id="calendar">
-                              <span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
-                              <input type="text"  name="reservation" id="reservationtime" class="form-control" value="08/01/2013 - 08/01/2013"  class="span4"/>
-                            </div>
+                        <div class="col-sm-3 col-sm-offset-4">
+                          <div class="form-group has-feedback">
+                            <label class="control-label" for="time">时间：</label>
+                            <input type="text" class="form-control" id="time" value="2016/01/01 - 2016/12/31" style="width:230px;">
+                            <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
                           </div>
                         </div>
                         <div class="col-sm-5">
@@ -154,7 +152,7 @@
                               <button class="btn btn-sm btn-white btn-equalwidth">批量放弃</button>
                           </div>
                           <div class="form-group pull-right margin-t5"  data-toggle="modal" data-target="#exportSuccessfully" data-backdrop="false">
-                            <button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip"  data-placement="top" title="导出"><span class="glyphicon glyphicon-download-alt text_big"></span></button>
+                            <button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip"  data-placement="top" title="导出"><span class="glyphicon glyphicon-upload text_large"></span></button>
                             商户数目：0/1256
                           </div>
                         </form>
@@ -211,9 +209,10 @@
                             <td>北京市西城区西直门xx街道xx号</td>
                             <td><span class="tag bg_brown">未拜访</span></td>
                             <td>
-                              <div class="input-group margin5" id="calendar">
-                                <input type="text" style="width: 100px" name="reservation" id="reservationtime" class="form-control text_small" value="10/01/2016"  class="span4"/>
-                                <span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
+                              <div class="form-group has-feedback">
+                                <label class="sr-only">拜访时间：</label>
+                                <input type="text" class="form-control" name="reservationTime" value="" style="min-width:135px">
+                                <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
                               </div>
                               <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#giveUp" >放弃</button>
                               <button type="button" class="btn btn-info btn-xs btn-block" data-toggle="modal" data-target="#checkMerchant">查看</button>
@@ -322,7 +321,7 @@
 
     <!-- Modal checkMerchant -->
     <div class="modal fade" id="checkMerchant" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog width900 height700 overflowy-scroll" style="margin:70px auto">
+      <div class="modal-dialog width900 height800 overflowy-scroll" style="margin:3% auto">
         <div class="modal-content" >
           <div class="modal-header bg_primary">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -331,7 +330,7 @@
           <div class="modal-body text_small">
             <!-- merchant basic record -->
             <div class="container-fluid ch-list">
-              <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">商户基本档案</div>
+              <div class="text_bold bg_black1 margin15 lineheight2 padding5">商户基本档案</div>
               <div class="row">
                 <div class="col-xs-4">
                   <div class="form-group">
@@ -430,12 +429,12 @@
               <div class="row">
                 <div class="col-xs-12">
                   <div class="form-group">
-                    <label class="control-label" for="ckContacts"><span class="red"> * </span>联系人</label>
+                    <label class="control-label" for="ckContacts">联系人</label>
                     <div class="text_gray">
                       <table class="table table-striped">
                         <tbody>
                           <tr>
-                            <td>Frank<span class="glyphicon glyphicon-flag text_blue text_big padleft5" ></span></td>
+                            <td>Frank<span class="glyphicon glyphicon-flag text_blue padleft5" ></span></td>
                             <td>经理负责人</td>
                             <td>189817213217</td>
                             <td>189817213</td>
@@ -472,7 +471,7 @@
 
             <!-- merchant followup -->
             <div class="container-fluid ch-list">
-              <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">商户跟进情况</div>
+              <div class="text_bold bg_black1 margin15 lineheight2 padding5">商户跟进情况</div>
               <div class="row">
                 <div class="col-xs-4">
                   <div class="form-group">
@@ -492,7 +491,7 @@
               <div class="row">
                 <div class="col-xs-2">
                   <div class="form-group">
-                    <label class="control-label" for="ckTime"><span class="red"> * </span>拜访次数</label>
+                    <label class="control-label" for="ckTime">拜访次数</label>
                     <input class="form-control" id="ckTime" type="text" value="1" disabled>
                   </div>
                 </div>
@@ -517,45 +516,70 @@
               <div class="row">
                 <div class="col-xs-11">
                   <label class="control-label" for="ckVisitedResult">拜访结果:</label>
-                  <div class="border1 overflowy-scroll height_m padding5" id="ckVisitedResult">
-                    <table class="table table-hover">
+                  <div class="border1 height_b padding5" id="ckVisitedResult">
+                    <table class="table table-hover marginbot0">
                       <thead>
                         <tr>
-                          <th>拜访时间</th>
-                          <th>拜访方式</th>
-                          <th>拜访目的</th>
-                          <th class="width300">拜访结果</th>
+                          <th class="col-sm-2">拜访时间</th>
+                          <th class="col-sm-2">拜访方式</th>
+                          <th class="col-sm-2">拜访目的</th>
+                          <th class="col-sm-6">拜访结果</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                          <td>2016/10/01</td>
-                          <td>电话拜访</td>
-                          <td>谈需求</td>
-                          <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
-                        </tr>
-                        <tr>
-                          <td>2016/10/01</td>
-                          <td>电话拜访</td>
-                          <td>谈需求</td>
-                          <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
-                        </tr>
-                        <tr>
-                          <td>2016/10/01</td>
-                          <td>电话拜访</td>
-                          <td>谈需求</td>
-                          <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
-                        </tr>
-                      </tbody>
                     </table>
+                    <div class="height_m overflowy-scroll">
+                      <table class="table table-hover text-center">
+                        <tbody class="">
+                          <tr>
+                            <td class="col-sm-2">2016/10/01</td>
+                            <td class="col-sm-2">电话拜访</td>
+                            <td class="col-sm-2">谈需求</td>
+                            <td class="col-sm-6">相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                          </tr>
+                          <tr>
+                            <td>2016/10/01</td>
+                            <td>电话拜访</td>
+                            <td>谈需求</td>
+                            <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                          </tr>
+                          <tr>
+                            <td>2016/10/01</td>
+                            <td>电话拜访</td>
+                            <td>谈需求</td>
+                            <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                          </tr>
+                          <tr>
+                            <td>2016/10/01</td>
+                            <td>电话拜访</td>
+                            <td>谈需求</td>
+                            <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                          </tr>
+                          <tr>
+                            <td>2016/10/01</td>
+                            <td>电话拜访</td>
+                            <td>谈需求</td>
+                            <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                          </tr>
+                          <tr>
+                            <td>2016/10/01</td>
+                            <td>电话拜访</td>
+                            <td>谈需求</td>
+                            <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
-              </div>
+                <div class="col-xs-1">
+                  <span class="glyphicon glyphicon-plus-sign text_xll margin-t60 text_blue" data-toggle="modal" data-target="#visitResult"></span>
+                </div>
+              </div>              
             </div>
 
             <!--  Great customer projects -->
             <div class="container-fluid ch-list margin-t20">
-              <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">大客户项目面板</div>
+              <div class="text_bold bg_black1 margin15 lineheight2 padding5">大客户项目面板</div>
               <div class="row">
                 <div class="col-xs-3">
                   <div class="form-group">
@@ -608,7 +632,7 @@
 
             <!-- after sale followup -->
             <div class="container-fluid ch-list margin-t20">
-              <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">售后跟进情况</div>
+              <div class="text_bold bg_black1 margin15 lineheight2 padding5">售后跟进情况</div>
               <div class="row">
                 <div class="col-xs-4">
                   <div class="form-group">
@@ -659,13 +683,66 @@
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
         $('#exportSuccessfully').on('shown.bs.modal', function () {
-          setTimeout(function(){$("#exportSuccessfully").modal("hide")},1000);
+          setTimeout(function(){$("#exportSuccessfully").modal("hide")},800);
         });
         $('#exportFail').on('shown.bs.modal', function () {
-          setTimeout(function(){$("#exportFail").modal("hide")},1000);
+          setTimeout(function(){$("#exportFail").modal("hide")},800);
         });
         $('#batchVisit').on('shown.bs.modal', function () {
-          setTimeout(function(){$("#batchVisit").modal("hide")},3000);
+          setTimeout(function(){$("#batchVisit").modal("hide")},2000);
+        });
+
+        $('#time').daterangepicker({
+            "showDropdowns": true,
+            "autoApply": false,
+            "locale": {
+                "format": "YYYY/MM/DD",
+                "separator": " - ",
+                "applyLabel": "确定",
+                "cancelLabel": "取消",
+                "fromLabel": "From",
+                "toLabel": "To",
+                "customRangeLabel": "Custom",
+                "weekLabel": "W",
+                "daysOfWeek": ["日", "一", "二", "三", "四", "五", "六"], 
+                "monthNames": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+                "firstDay": 1
+            },
+            "linkedCalendars": false,
+            "showCustomRangeLabel": false,
+            "startDate": "2016/01/01",
+            "endDate": "2016/12/31",
+            "minDate": "2000/01/01",
+            "maxDate": "2030/12/31",
+            "opens": "center"
+          }, function(start, end, label) {
+            console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+        });
+
+        $('input[name="reservationTime"]').daterangepicker({
+            "singleDatePicker": true,
+            "showDropdowns": true,
+            "autoApply": true,
+            "locale": {
+                "format": "YYYY/MM/DD",
+                "separator": " - ",
+                "applyLabel": "确定",
+                "cancelLabel": "取消",
+                "fromLabel": "From",
+                "toLabel": "To",
+                "customRangeLabel": "Custom",
+                "weekLabel": "W",
+                "daysOfWeek": ["日", "一", "二", "三", "四", "五", "六"], 
+                "monthNames": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+                "firstDay": 1
+            },
+            "startDate": "2016/01/01",
+            "endDate": "2016/12/31",
+            "minDate": "2010/01/01",
+            "maxDate": "2030/12/31",
+            "opens": "left"
+          }, function(start, end, label) {
+            console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
         });
     });
   </script>

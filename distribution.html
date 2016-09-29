@@ -5,19 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>成员管理</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/crm.css">
-    <link rel="stylesheet" href="css/daterangepicker.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/moment.min.js"></script>
-    <script type="text/javascript" src="js/daterangepicker.js"></script>
 </head>
 <body>
   <!-- headbar -->
@@ -82,13 +81,12 @@
       <li>
         <div class="list_title active1" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe60f;</i>后台管理<span><img src="img/downarrow.png" alt=""></span></div>
         <ul id="ListG3" class="list_panel  collapse in">
-        <li><a href="memberManagement.html" class=" active">成员管理</a></li>
-        <li><a href="distribution.html">资源分配</a></li>
+        <li><a href="memberManagement.html">成员管理</a></li>
+        <li><a href="distribution.html" class="active">资源分配</a></li>
         </ul>
       </li>
     </ul>
   </div>
-
 
   <!-- content -->
   <div class="right_bar pad-none">
@@ -96,78 +94,79 @@
       <div class="col-sm-12">
         <div class="panel panel-default">
           <div class="pane-body pubilc_pad">
-            <!-- formgroup -->
-            <form class="form-inline margin20">
+            <h4 class="margin10">资源分配</h4>
+            <p class="margin20">管理员可通过此权限实现对公海资源的管理,同事可实现成员之间的资源再分配</p>
+            <!-- table -->
+            <div class="bordertop border1 height700 container-fluid">
               <div class="row">
-                <div class="col-sm-5">
-                  <div class="form-group">
-                    <label for="merStatus">在职状况：</label>
-                    <select id="merStatus" class="form-control">
-                      <option>正常</option>
-                      <option>休假</option>
-                      <option>待续约</option>
-                      <option>离职</option>
+                <div class="col-sm-10 margin-t10"><p>1.规定成员可领取公海资源范围</p></div>
+                <div class="col-sm-10 margin-t10">
+                  <div class="form-inline">
+                    <select class="form-control margin-r15">
+                      <option value="">省/市</option>
+                      <option value="">北京市</option>
+                      <option value="">上海市</option>
                     </select>
-                  </div>  
+                    <select class="form-control margin-r15">
+                      <option value="">市</option>
+                      <option value="">北京市</option>
+                    </select>
+                    <select class="form-control margin-r35">
+                      <option value="">区/县</option>
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                    </select>
+                    <label class="control-label">分配给：</label>
+                    <select class="form-control margin-r15">
+                      <option value="">部门</option>
+                      <option value=""></option>
+                    </select>
+                    <select class="form-control margin-r15">
+                      <option value="">成员</option>
+                      <option value=""></option>
+                    </select>
+                    <span class="glyphicon glyphicon-plus-sign text_xll vertical-m text_blue"></span>
+                  </div>
                 </div>
-                <div class="col-sm-1">
-                  <div class="form-group">
-                    <label for="addMem" class="sr-only">添加成员</label>
-                    <button  type="button" class="btn btn-info" id="addMem" data-toggle="modal" data-target="#addMember">添加成员</button>
-                  </div>  
-                </div>
-                <div class="col-sm-4 col-sm-offset-2">
-                  <div class="form-group pull-right">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="请输入信息进行查询">
-                      <span class="input-group-btn">
-                        <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                      </span>
-                   </div>
-                  </div>  
+                <div class="col-sm-10 margin-t10">
+                  <div class="height_l overflowy-scroll border1 padding15">
+                    <p class="width_half"><span class="di-adr">北京市朝阳区</span><span class="di-dep">分配给销售一部</span><span class="di-mem">Rio</span> <span class="red pull-right">x</span></p>
+                  </div>
                 </div>
               </div>
-            </form>
-            <!-- table -->
-            <div class="bordertop">
-              <table class="table table-bordered text-center">
-                <tr class="">
-                  <th>登录账号</th>
-                  <th>姓名</th>
-                  <th>部门</th>
-                  <th>性别</th>
-                  <th>手机号码</th>
-                  <th>邮箱</th>
-                  <th>成员在职状态</th>
-                </tr>
-                <tr>
-                  <td>111111111</td>
-                  <td>丁丁</td>
-                  <td>销售一部</td>
-                  <td>女</td>
-                  <td>13821457896</td>
-                  <td>147845698@qq.com</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>111111111</td>
-                  <td>李海豚</td>
-                  <td>销售二部</td>
-                  <td>女</td>
-                  <td>13821457896</td>
-                  <td>147845698@qq.com</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>111111111</td>
-                  <td>常图图</td>
-                  <td>未分配部门</td>
-                  <td>男</td>
-                  <td>13821457896</td>
-                  <td>147845698@qq.com</td>
-                  <td></td>
-                </tr>
-              </table>
+              <div class="row">
+                <div class="col-sm-10 margin-t10"><p>2.资源转让,管理员可将成员拥有的资源分配给其他成员.</p></div>
+                <div class="col-sm-10 margin-t10">
+                  <div class="form-inline">
+                    <select class="form-control margin-r15">
+                      <option value="">部门</option>
+                      <option value="">销售部</option>
+                    </select>
+                    <select class="form-control margin-r35">
+                      <option value="">成员</option>
+                      <option value="">1</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                    </select>
+                    <label class="control-label">分配给：</label>
+                    <select class="form-control margin-r15">
+                      <option value="">部门</option>
+                      <option value=""></option>
+                    </select>
+                    <select class="form-control margin-r15">
+                      <option value="">成员</option>
+                      <option value=""></option>
+                    </select>
+                    <span class="glyphicon glyphicon-plus-sign text_xll vertical-m text_blue"></span>
+                  </div>
+                </div>
+                <div class="col-sm-10 margin-t10">
+                  <div class="height_l overflowy-scroll border1 padding15">
+                    <p class="width_half"><span class="di-dep1">销售二部</span><span class="di-dep2">分配给销售一部</span><span class="di-mem">Rio</span> <span class="red pull-right">x</span></p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="store_foot"></div>
           </div>
@@ -178,7 +177,7 @@
 
   <!-- Modal add member -->
   <div class="modal fade" id="addMember" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog width800 height700 " style="margin:8% auto">
+    <div class="modal-dialog width800 height700 " style="margin:70px auto">
       <div class="modal-content" >
         <div class="modal-header bg_primary">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -224,20 +223,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <label class="col-xs-4 control-label"><span class="red"> * </span>系统角色：</label>
-                  <div class="col-xs-7">
-                    <select class="form-control" name="" id="">
-                      <option value="">普通</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
             </div>
             <div class="row">
               <div class="col-sm-6">
@@ -311,22 +296,26 @@
                 </div>
               </div>
               <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <label class="col-xs-4 control-label" for="memberBirthDate">成员生日：</label>
+                <div class="form-group">
+                  <label class="col-xs-4 control-label">成员生日：</label>
                   <div class="col-xs-7">
-                    <input type="text" class="form-control" id="memberBirthDate" value="">
-                    <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+                    <div class="input-group " id="calendar">
+                      <span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
+                      <input type="text" name="reservation" id="reservationtime" class="form-control" value="08/01/2013" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-sm-6">
-                <div class="form-group has-feedback">
-                  <label class="col-xs-4 control-label" for="memberJoinDate">入职时间：</label>
+                <div class="form-group">
+                  <label class="col-xs-4 control-label">入职时间：</label>
                   <div class="col-xs-7">
-                    <input type="text" class="form-control" id="memberJoinDate" value="">
-                    <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+                    <div class="input-group " id="calendar">
+                      <span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
+                      <input type="text" name="reservation" id="reservationtime" class="form-control" value="08/01/2013" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -398,33 +387,6 @@
     });
     $('#addMemberFail').on('shown.bs.modal', function () {
       setTimeout(function(){$("#addMemberFail").modal("hide")},800);
-    });
-
-    $('#memberBirthDate,#memberJoinDate').daterangepicker({
-        "singleDatePicker": true,
-        "showDropdowns": true,
-        "autoApply": true,
-        "locale": {
-            "format": "YYYY/MM/DD",
-            "separator": " - ",
-            "applyLabel": "确定",
-            "cancelLabel": "取消",
-            "fromLabel": "From",
-            "toLabel": "To",
-            "customRangeLabel": "Custom",
-            "weekLabel": "W",
-            "daysOfWeek": ["日", "一", "二", "三", "四", "五", "六"], 
-            "monthNames": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
-            "firstDay": 1
-        },
-        "startDate": "2016/01/01",
-        "endDate": "2016/12/31",
-        "minDate": "1900/01/01",
-        "maxDate": "2020/12/31",
-        "opens": "center",
-        "drops": "up"
-    }, function(start, end, label) {
-      console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
     });
   });
 </script>

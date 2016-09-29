@@ -4,13 +4,16 @@ ul,ol,li,dl,dt,dd,p,span,form,input,table,tr,td{ padding:0; margin:0}
 ul,ol{ list-style:none}
 img{ border:none}
 a{text-decoration:none;}
+th{text-align: center;}
 .margin0{margin: 0px !important;}
+.marginbot0{margin-bottom:0;}
 .margin5{margin-bottom: 5px;}
 .margin10{margin-bottom: 10px;}
 .margin15{margin-bottom: 15px;}
 .margin20{margin-bottom: 20px;}
 .margin30{margin-bottom: 30px}
 .margin-r65{margin-right: 65px;}
+.margin-r35{margin-right: 35px;}
 .margin-r25{margin-right: 25px;}
 .margin-r20{margin-right: 20px;}
 .margin-r15{margin-right: 15px;}
@@ -27,16 +30,23 @@ a{text-decoration:none;}
 .padding15{padding:15px;}
 .padleft5{padding-left: 5px;}
 .padleft15{padding-left: 15px;}
+.padtop25{padding-top: 25px;}
+.padbot0{padding-bottom: 0;}
 .pad-none{padding-left: 0px}
+.padright-none{padding-right: 0px}
+.height0{height:0;}
 .height_s{height: 80px;}
 .height_m{height: 100px;}
 .height_b{height: 150px;}
 .height_l{height: 200px;}
 .height700{height: 700px;}
+.height800{height: 800px;}
 .height_full{height: 100vh;}
 .width800{width: 800px;}
 .width900{width: 900px;}
 .width300{width: 300px;}
+.width200{width: 200px;}
+.width_half{width: 50%;}
 .float-l{float:left;}
 .float-r{float:right;}
 .border1{border: 1px #BBB solid;border-radius: 2px;}
@@ -45,6 +55,7 @@ a{text-decoration:none;}
 .bordernone{border:0;}
 .overflowy-scroll{ overflow-y: scroll; }
 .overflowx-scroll{ overflow-x: scroll; }
+.vertical-m{vertical-align:middle;}
 .control-label{font-weight:normal; font-size: 14px} 
 .in-block{display: inline-block;}
 .red{ color: #f00 }
@@ -76,6 +87,13 @@ a{text-decoration:none;}
     url('../fonts/iconfont.woff') format('woff'), /* chrome、firefox */
     url('../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
     url('../fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {font-family: 'iconfont';
+    src: url('../fonts/ux/iconfont.eot'); /* IE9*/
+    src: url('../fonts/ux/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/ux/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/ux/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/ux/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 .navbar-crm{background-color:#03baa4; border-color:#05af9b; min-height: 80px;}
 .logo_pad{padding:24px 0 0 15px; }
@@ -117,16 +135,17 @@ a{text-decoration:none;}
 .store_form table tr td.text-left{ text-align:left; }
 .store_form table tr td{vertical-align: middle;}
 .tag{ color:#fff; padding: 5px 7px; border-radius:20px; font-size: 12px; overflow: hidden; display: inline-block;}
-.bg_primary{ background-color:#00b39e; }
-.bg_green{ background-color: #77D03C; }
-.bg_brown{ background-color: #c79c71; }
-.bg_yellow{ background-color: #FFA424; }
-.bg_blue{ background-color: #50C8C8; }
-.bg_red{ background-color: #DF4665; }
-.bg_warn{ background: #f00; }
-.bg_pink{ background-color: #EE7698; }
-.bg_purple{ background-color: #DE59B1; }
-.bg_gray{ background-color: #CCCCCC; }
+.bg_info{background-color:#35A8E3;}/*未分配*/
+.bg_primary{ background-color:#00b39e; }/*待签约*/
+.bg_green{ background-color: #77D03C; }/*已拜访*/  
+.bg_brown{ background-color: #c79c71; }/*未拜访*/
+.bg_yellow{ background-color: #FFA424; }/*已签约*/
+.bg_blue{ background-color: #50C8C8; }/*已上线*/
+.bg_red{ background-color: #DF4665; }/*断约中*/
+.bg_warn{ background: #f00;}
+.bg_pink{ background-color: #EE7698; }/*待上线*/
+.bg_purple{ background-color: #DE59B1; }/*待拜访*/
+.bg_gray{ background-color: #CCCCCC; }/*不合作*/
 .bg_black{ background-color: rgba(0,0,0,.7); }
 .bg_black5{ background-color: rgba(0,0,0,.5); }
 .bg_black1{ background-color: rgba(0,0,0,.1); }
@@ -145,7 +164,7 @@ a{text-decoration:none;}
 .remind-tabs>li.border0{border:0;}
 .panel-body {padding:20px 0;}
 
-.btn-equalwidth{width:6rem;}
+.btn-equalwidth{width:9rem;}
 .btn-equalwidth2{width:12rem;}
 .text_orange{color: #FFA424;}
 .text_white{color: #FFF;}
@@ -165,6 +184,8 @@ a{text-decoration:none;}
 .lineheight80{line-height:80px;}
 .relative{position: relative;}
 .absolute{position: absolute;}
+.top0{top: 0;}
+.left0{left: 0;}
 
 .link:link{text-decoration: underline; color: #4BBCFA;}
 .link:visited{text-decoration: underline; color: #4BBCFA;}

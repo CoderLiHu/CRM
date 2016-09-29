@@ -7,7 +7,7 @@
 	<title>销售CRM系统</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/crm.css">
-	<link rel="stylesheet" href="css/daterangepicker-bs3.css">
+	<link rel="stylesheet" href="css/daterangepicker.css">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -16,7 +16,7 @@
   <![endif]-->
 	<script src="js/jquery-3.0.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/moment.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
   <script type="text/javascript" src="js/daterangepicker.js"></script>
 </head>
 <body>
@@ -77,14 +77,13 @@
           <ul id="ListG2" class="list_panel  collapse in">
             <li><a href="merchantsPrivate.html">私海商户库</a></li>
        		<li><a href="myVisits.html">我的拜访</a></li>
-            <li><a href="#">款项核实</a></li>
-            <li><a href="#">上单</a></li>
           </ul>
         </li>
         <li>
-        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
+        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe60f;</i>后台管理<span><img src="img/downarrow.png" alt=""></span></div>
           <ul id="ListG3" class="list_panel  collapse in">
-            <li><a href="#">我的消息</a></li>
+          <li><a href="memberManagement.html">成员管理</a></li>
+          <li><a href="distribution.html">资源分配</a></li>
           </ul>
         </li>
     </ul>
@@ -108,13 +107,11 @@
            		</div>
             	<div class="row margin15">
             		<div class="col-sm-4">
-		            	<div class="form-group">
-		            		<label for="calendar">入库时间：</label>
-    								<div class="input-group " id="calendar">
-               				<input type="text" name="reservation" id="reservationtime" class="form-control" value="08/01/2013 - 08/01/2013"/>
-							  			<span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
-										</div>
-		            	</div>
+            			<div class="form-group has-feedback">
+									  <label class="control-label" for="putinTime">入库时间：</label>
+									  <input type="text" class="form-control" id="putinTime" value="2016/01/01 - 2016/12/31" style="width:230px;">
+									  <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+									</div>
 	            	</div>
 	            	<div class="col-sm-8">
 		            	<div class="form-group">
@@ -193,7 +190,7 @@
 									<button type="button" class="btn btn-sm btn-white btn-equalwidth">批量领取</button>
 									<button type="button" class="btn btn-sm btn-white btn-equalwidth" data-toggle="modal" data-target="#distribution">分配</button>
 									<div class="pull-right" data-toggle="modal" data-target="#inportSuccessfully" data-backdrop="false">
-										<button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip" data-placement="top" title="导入"><span class="glyphicon glyphicon-upload text_large"></span></button>
+										<button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip" data-placement="top" title="导入"><span class="glyphicon glyphicon-download text_large"></span></button>
 										商户数目：0/1256
 									</div>
 	            	</form>
@@ -517,52 +514,64 @@
     
 </body>
 <script type="text/javascript">
-   	$(document).ready(function() {
-	    $('#reservationtime').daterangepicker({
-	    	timePicker: true,
-	        timePickerIncrement: 30,
-	        format: 'MM/DD/YYYY'
-	    }, function(start, end, label) {
-	        console.log(start.toISOString(), end.toISOString(), label);
-	    });
-	});
+
+
 
 	$(function () {
     $("[data-toggle='tooltip']").tooltip(); 
 
     $('#inportSuccessfully').on('shown.bs.modal', function () {
-    	setTimeout(function(){$("#inportSuccessfully").modal("hide")},1000);
+    	setTimeout(function(){$("#inportSuccessfully").modal("hide")},800);
     });
     $('#inportFail').on('shown.bs.modal', function () {
-   	 setTimeout(function(){$("#inportFail").modal("hide")},1000);
+   	 setTimeout(function(){$("#inportFail").modal("hide")},800);
     });
     $('#getSuccessfully').on('shown.bs.modal', function () {
-    	setTimeout(function(){$("#getSuccessfully").modal("hide")},1000);
+    	setTimeout(function(){$("#getSuccessfully").modal("hide")},800);
     });
     $('#getFail').on('shown.bs.modal', function () {
-    	setTimeout(function(){$("#getFail").modal("hide")},1000);
+    	setTimeout(function(){$("#getFail").modal("hide")},800);
     });
     $('#backoutSuccessfully').on('shown.bs.modal', function () {
-    	setTimeout(function(){$("#backoutSuccessfully").modal("hide")},1000);
+    	setTimeout(function(){$("#backoutSuccessfully").modal("hide")},800);
     });
     $('#backoutFail').on('shown.bs.modal', function () {
-   	 setTimeout(function(){$("#backoutFail").modal("hide")},1000);
+   	 setTimeout(function(){$("#backoutFail").modal("hide")},800);
     });
     $('#distributeSuccessfully').on('shown.bs.modal', function () {
-   	 setTimeout(function(){$("#distributeSuccessfully").modal("hide")},1000);
+   	 setTimeout(function(){$("#distributeSuccessfully").modal("hide")},800);
     });
     $('#distributeFail').on('shown.bs.modal', function () {
-   	 setTimeout(function(){$("#distributeFail").modal("hide")},1000);
+   	 setTimeout(function(){$("#distributeFail").modal("hide")},800);
     });
 
 
-
-		$('#mystore').on('click', function () {
-			var $btn = $(this).button('loading')
-		    // business logic...
-		    $btn.button('reset')
-		})
-
+    $('#putinTime').daterangepicker({
+	    "showDropdowns": true,
+	    "autoApply": false,
+	    "locale": {
+	        "format": "YYYY/MM/DD",
+	        "separator": " - ",
+	        "applyLabel": "确定",
+	        "cancelLabel": "取消",
+	        "fromLabel": "From",
+	        "toLabel": "To",
+	        "customRangeLabel": "Custom",
+	        "weekLabel": "W",
+	        "daysOfWeek": ["日", "一", "二", "三", "四", "五", "六"], 
+	        "monthNames": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+	        "firstDay": 1
+	    },
+	    "linkedCalendars": false,
+	    "showCustomRangeLabel": false,
+	    "startDate": "2016/01/01",
+	    "endDate": "2016/12/31",
+	    "minDate": "2000/01/01",
+	    "maxDate": "2030/12/31",
+	    "opens": "center"
+    }, function(start, end, label) {
+      console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
     });
+  });
 </script>
 </html>

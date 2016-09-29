@@ -7,17 +7,17 @@
 	<title>商户信息录入</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/crm.css">
-	<link rel="stylesheet" href="css/daterangepicker-bs3.css">
+	<link rel="stylesheet" href="css/daterangepicker.css">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  	<script src="js/jquery-3.0.0.min.js"></script>
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+	<script src="js/jquery-3.0.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/moment.js"></script>
-    <script type="text/javascript" src="js/daterangepicker.js"></script>
+	<script type="text/javascript" src="js/moment.min.js"></script>
+  <script type="text/javascript" src="js/daterangepicker.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-crm navbar-fixed-top">
@@ -76,14 +76,13 @@
         <ul id="ListG2" class="list_panel  collapse in">
           <li><a href="merchantsPrivate.html">私海商户库</a></li>
           <li><a href="myVisits.html" >我的拜访</a></li>
-          <li><a href="#">款项核实</a></li>
-          <li><a href="#">上单</a></li>
         </ul>
       </li>
       <li>
-        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe604;</i>个人中心<span><img src="img/downarrow.png" alt=""></span></div>
+        <div class="list_title" data-toggle="collapse" href="#ListG3"><i class="iconfont">&#xe60f;</i>后台管理<span><img src="img/downarrow.png" alt=""></span></div>
         <ul id="ListG3" class="list_panel  collapse in">
-          <li><a href="#">我的消息</a></li>
+          <li><a href="memberManagement.html">成员管理</a></li>
+          <li><a href="distribution.html">资源分配</a></li>
         </ul>
       </li>
     </ul>
@@ -107,14 +106,14 @@
 			              <div class="col-xs-4">
 			                <div class="form-group">
 			                  <label  class="control-label" for="ckName"><span class="red"> * </span>商户名称</label>
-			                  <input class="form-control" id="ckName" type="text" value="奶茶爱上粉">
+			                  <input class="form-control" id="ckName" type="text" value="" placeholder="请输入商户名称">
 			                </div>
 			              </div>
 			              <div class="col-xs-3 col-xs-offset-1">
 			                <div class="form-group">
 			                  <label class="control-label" for="ckActivities"><span class="red"> * </span>商户业态</label>
 			                  <select class="form-control" id="ckActivities" type="select">
-			                    <option value="其他" selected="selected">其他</option>
+			                    <option value="" selected="selected">商户类别</option><option value="" selected="selected">其他</option>
 			                  </select>
 			                </div>
 			              </div>
@@ -122,7 +121,8 @@
 			                <div class="form-group">
 			                  <label class="control-label" for="ckMultiple"><span class="red"> * </span>连锁类型</label>
 			                  <select class="form-control" id="ckMultiple" type="select">
-			                    <option value="加盟连锁" selected="selected">加盟连锁</option>
+			                    <option value="" selected="selected">连锁类型</option>
+			                    <option value="" selected="selected">加盟连锁</option>
 			                  </select>
 			                </div>
 			              </div>
@@ -201,12 +201,12 @@
 			            <div class="row">
 			              <div class="col-xs-12">
 			                <div class="form-group">
-			                  <label class="control-label" for="ckContacts"><span class="red"> * </span>联系人</label>
+			                  <label class="control-label" for="ckContacts">联系人</label>
 			                  <div class="text_gray">
 			                    <table class="table table-striped">
 			                      <tbody>
 			                        <tr>
-			                          <td>Frank<span class="glyphicon glyphicon-flag text_blue text_big padleft5" ></span></td>
+			                          <td>Frank<span class="glyphicon glyphicon-flag text_blue padleft5" ></span></td>
 			                          <td>经理负责人</td>
 			                          <td>189817213217</td>
 			                          <td>189817213</td>
@@ -238,7 +238,7 @@
 			              <div class="col-xs-4">
 			                <div class="form-group">
 			                  <label class="control-label" for="ckBrand">系统品牌</label>
-			                  <input class="form-control" id="ckBrand" type="text" value="归到">
+			                  <input class="form-control" id="ckBrand" type="text" value="">
 			                </div>
 			              </div>
 			            </div>
@@ -246,12 +246,12 @@
 
 			          <!-- merchant followup -->
 			          <div class="container-fluid ch-list">
-			            <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">商户跟进情况</div>
+			            <div class="text_bold bg_black1 margin15 lineheight2 padding5">商户跟进情况</div>
 			            <div class="row">
 			              <div class="col-xs-4">
 			                <div class="form-group">
 			                  <label class="control-label" for="ckNeed">商户需求</label>
-			                  <input class="form-control" id="ckNeed" type="text" value="点餐系统">
+			                  <input class="form-control" id="ckNeed" type="text" value="" placeholder="意向公司产品">
 			                </div>
 			              </div>
 			              <div class="col-xs-3 col-xs-offset-1">
@@ -266,7 +266,7 @@
 			            <div class="row">
 			              <div class="col-xs-2">
 			                <div class="form-group">
-			                  <label class="control-label" for="ckTime"><span class="red"> * </span>拜访次数</label>
+			                  <label class="control-label" for="ckTime">拜访次数</label>
 			                  <input class="form-control" id="ckTime" type="text" value="1">
 			                </div>
 			              </div>
@@ -291,37 +291,59 @@
 			            <div class="row">
 			              <div class="col-xs-11">
 			                <label class="control-label" for="ckVisitedResult">拜访结果:</label>
-			                <div class="border1 overflowy-scroll height_m padding5" id="ckVisitedResult">
-			                  <table class="table table-hover">
+			                <div class="border1 height_b padding5" id="ckVisitedResult">
+			                  <table class="table table-hover marginbot0">
 			                    <thead>
 			                      <tr>
-			                        <th>拜访时间</th>
-			                        <th>拜访方式</th>
-			                        <th>拜访目的</th>
-			                        <th class="width300">拜访结果</th>
+			                        <th class="col-sm-2">拜访时间</th>
+			                        <th class="col-sm-2">拜访方式</th>
+			                        <th class="col-sm-2">拜访目的</th>
+			                        <th class="col-sm-6">拜访结果</th>
 			                      </tr>
 			                    </thead>
-			                    <tbody>
-			                      <tr>
-			                        <td>2016/10/01</td>
-			                        <td>电话拜访</td>
-			                        <td>谈需求</td>
-			                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
-			                      </tr>
-			                      <tr>
-			                        <td>2016/10/01</td>
-			                        <td>电话拜访</td>
-			                        <td>谈需求</td>
-			                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
-			                      </tr>
-			                      <tr>
-			                        <td>2016/10/01</td>
-			                        <td>电话拜访</td>
-			                        <td>谈需求</td>
-			                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
-			                      </tr>
-			                    </tbody>
-			                  </table>
+		                    </table>
+		                    <div class="height_m overflowy-scroll">
+			                    <table class="table table-hover text-center">
+				                    <tbody class="">
+				                      <tr>
+				                        <td class="col-sm-2">2016/10/01</td>
+				                        <td class="col-sm-2">电话拜访</td>
+				                        <td class="col-sm-2">谈需求</td>
+				                        <td class="col-sm-6">相谈甚欢，巴拉巴拉哗啦啦啦</td>
+				                      </tr>
+				                      <tr>
+				                        <td>2016/10/01</td>
+				                        <td>电话拜访</td>
+				                        <td>谈需求</td>
+				                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+				                      </tr>
+				                      <tr>
+				                        <td>2016/10/01</td>
+				                        <td>电话拜访</td>
+				                        <td>谈需求</td>
+				                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+			                        </tr>
+				                      <tr>
+				                        <td>2016/10/01</td>
+				                        <td>电话拜访</td>
+				                        <td>谈需求</td>
+				                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+				                      </tr>
+				                      <tr>
+				                        <td>2016/10/01</td>
+				                        <td>电话拜访</td>
+				                        <td>谈需求</td>
+				                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+				                      </tr>
+				                      <tr>
+				                        <td>2016/10/01</td>
+				                        <td>电话拜访</td>
+				                        <td>谈需求</td>
+				                        <td>相谈甚欢，巴拉巴拉哗啦啦啦</td>
+				                      </tr>
+				                    </tbody>
+				                  </table>
+			                  </div>
 			                </div>
 			              </div>
 			              <div class="col-xs-1">
@@ -332,7 +354,7 @@
 
 			          <!--  Great customer projects -->
 			          <div class="container-fluid ch-list margin-t20">
-			            <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">大客户项目面板</div>
+			            <div class="text_bold bg_black1 margin15 lineheight2 padding5">大客户项目面板</div>
 			            <div class="row">
 	                  <div class="col-xs-3">
 	                    <div class="form-group">
@@ -397,7 +419,7 @@
 
 			          <!-- after sale followup -->
 			          <div class="container-fluid ch-list margin-t20">
-			            <div class="text_bold text_big bg_black1 margin15 lineheight2 padding5">售后跟进情况</div>
+			            <div class="text_bold bg_black1 margin15 lineheight2 padding5">售后跟进情况</div>
 			            <div class="row">
 			              <div class="col-xs-5">
 			                <div>
@@ -442,7 +464,7 @@
 			            <div class="row">
 			              <div class="col-sm-offset-3 col-sm-9 ">
 			                <button type="submit" class="btn btn-info margin-r25 btn-equalwidth2">保存并新建</button>
-			                <button type="submit" class="btn btn-info margin-r25 btn-equalwidth2">保存</button>
+			                <button type="submit" class="btn btn-info margin-r25 btn-equalwidth2" data-toggle="modal" data-target="#saveSuccessfully" data-backdrop="false">保存</button>
 			                <button type="submit" class="btn btn-info btn-equalwidth2">重置</button>
 			              </div>
 			            </div>
@@ -502,10 +524,10 @@
       	</div>
       	<div class="modal-footer">
         	<div class="col-sm-3 col-sm-offset-2">
-	        	<button type="button" class="btn bg_primary btn-block margin-r65 text_white">保存</button>
+	        	<button type="button" class="btn bg_primary btn-block margin-r65 text_white" data-dismiss="modal" data-toggle="modal" data-target="#saveSuccessfully" data-backdrop="false">保存</button>
 	        </div>
 	        <div class="col-sm-3 col-sm-offset-2">	
-	        	<button type="button" class="btn bg_gray btn-block text_white" data-dismiss="modal">取消</button>
+	        	<button type="button" class="btn bg_gray btn-block text_white" data-dismiss="modal" data-toggle="modal" data-target="#saveFail" data-backdrop="false">取消</button>
         	</div>
       	</div>
 	    </div>
@@ -513,7 +535,7 @@
 	</div>
 
 	<!-- modal visit result -->
-	<div class="modal fade" id="visitResult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="visitResult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  	<div class="modal-dialog" role="document">
 		    <div class="modal-content">
 		      	<div class="modal-header bg_primary">
@@ -522,13 +544,11 @@
 			      </div>
 		      	<div class="modal-body">
 		        	<form class="form-horizontal">
-		        		<div class="form-group">
-            			<label class="col-sm-3 control-label">拜访时间：</label>
+		        		<div class="form-group has-feedback">
+            			<label class="col-sm-3 control-label" for="visitTime">拜访时间：</label>
             			<div class="col-sm-8">
-	            			<div class="input-group " id="calendar">
-								  	  <span class="input-group-addon"><i class="iconfont" style="padding-right:0px">&#xe607;</i></span>
-	                    <input type="text" style="width: 200px" name="reservation" id="reservationtime" class="form-control" value="08/01/2013"/>
-							      </div>
+	            			<input type="text" class="form-control" id="visitTime" value="">
+									  <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
             			</div>
             		</div>
             		<div class="form-group">
@@ -543,7 +563,7 @@
             		<div class="form-group">
             			<label class="col-sm-3 control-label">拜访目的：</label>
             			<div class="col-sm-8">
-	            		<input type="text" class="form-control">
+	            		<input type="text" class="form-control" placeholder="可填商机确认,商务洽谈,需求沟通,方案论证,合同签订等">
             			</div>
             		</div>
             		<div class="form-group">
@@ -566,79 +586,142 @@
 		</div>
 	</div>
 
-    <!-- modal add products already buied -->
-    <div id="addBuiedLabel" class="modal fade">
-  		<div class="modal-dialog" role="document">
-  		<div class="modal-content">
-  			<div class="modal-header">
-  				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  				<a class="btn btn-default">手机点菜宝
-  					<span><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
-  				</a>
-  				<a class="btn btn-default">微信餐厅
-					<span><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></span>
-  				</a>
-  			</div>
-  			<div class="modal-body">
-  				<form class="form-horizontal">
-  					<div class="form-group">
-  						<label class="col-sm-2 control-label"><strong>门店POS:</strong></label>
-  						<div class="col-sm-10">
-  							<label class="checkbox-inline">
-  								<input type="checkbox" id="" value="option1">点单
-  							</label>
-  							<label class="checkbox-inline">
-  								<input type="checkbox" id="" value="option2">收银
-  							</label>
-  							<label class="checkbox-inline">
-  								<input type="checkbox" id="" value="option2">厨打
-  							</label>
-  							<label class="checkbox-inline">
-  								<input type="checkbox" id="" value="option2">老板通
-  							</label>
-  							<label class="checkbox-inline">
-  								<input type="checkbox" id="" value="option2">手机点菜宝
-  							</label>
-  							<label class="checkbox-inline">
-  								<input type="checkbox" id="" value="option2">聚合支付
-  							</label>
-  						</div>
-  					</div>
-  					<div class="form-group">
-  						<label class="col-sm-2 control-label"><strong>拓展模块</strong></label>
-  						<div class="col-sm-10">
-  							<label class="checkbox-inline">
-  								<input type="checkbox" id="inlineCheckbox1" value="option1">微信餐厅
-  							</label>
-  							<label class="checkbox-inline">
-  								<input type="checkbox" id="inlineCheckbox2" value="option2">云会员
-  							</label>
-  							<label class="checkbox-inline">
-  								<input type="checkbox" id="inlineCheckbox1" value="option1">聚合外卖
-  							</label>
-  						</div>
-  					</div>
-  					<div class="form-group">
-  						<label class="col-sm-2 control-label"><strong>库存管理</strong></label>
-  						<div class="col-sm-10">
-  							<label class="checkbox-inline">
-  								<input type="checkbox" id="inlineCheckbox1" value="option1">云库存
-  							</label>
-  						</div>
-  					</div>
-  				</form>
-  			</div>
-  			<div class="modal-footer">
-  				<button type="button" class="btn btn-info">确定</button>
-  				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-  			</div>
-  		</div>
-  		</div>
+  <!-- modal add products already buied -->
+  <div id="addBuiedLabel" class="modal fade">
+		<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<a class="btn btn-default padright-none">手机点菜宝<span class="padding5">&times;</span></a>
+				<a class="btn btn-default padright-none">微信餐厅<span class="padding5">&times;</span></a>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-2 control-label"><strong>门店POS:</strong></label>
+						<div class="col-sm-10">
+							<label class="checkbox-inline">
+								<input type="checkbox" id="" value="option1">点单
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" id="" value="option2">收银
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" id="" value="option2">厨打
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" id="" value="option2">老板通
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" id="" value="option2">手机点菜宝
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" id="" value="option2">聚合支付
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label"><strong>拓展模块</strong></label>
+						<div class="col-sm-10">
+							<label class="checkbox-inline">
+								<input type="checkbox" id="inlineCheckbox1" value="option1">微信餐厅
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" id="inlineCheckbox2" value="option2">云会员
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" id="inlineCheckbox1" value="option1">聚合外卖
+							</label>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-2 control-label"><strong>库存管理</strong></label>
+						<div class="col-sm-10">
+							<label class="checkbox-inline">
+								<input type="checkbox" id="inlineCheckbox1" value="option1">云库存
+							</label>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-info">确定</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			</div>
+		</div>
+		</div>
+  </div>
+
+	<!--modal save successfully -->
+	<div class="modal fade in" id="saveSuccessfully" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:230px" >
+      <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-1 text_green text-right" style="font-size:3rem" >
+              <span class="glyphicon glyphicon-ok-sign" ></span>
+            </div>
+            <div class="col-xs-6 text-center" style="line-height:3">
+              保存成功
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+	<!--modal save fail -->
+	<div class="modal fade in" id="saveFail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:230px" >
+      <div class="modal-content bg_black text_white" style="width:230px; padding:10px">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-3 col-xs-offset-1 text_red text-right" style="font-size:3rem" >
+              <span class="glyphicon glyphicon-remove-circle" ></span>
+            </div>
+            <div class="col-xs-6 text-center" style="line-height:3">
+              保存失败
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script>
 	$(function () { 
 		$("[data-toggle='tooltip']").tooltip(); 
+		$('#saveSuccessfully').on('shown.bs.modal', function () {
+			setTimeout(function(){$("#saveSuccessfully").modal("hide")},800);
+		});
+		$('#saveFail').on('shown.bs.modal', function () {
+			setTimeout(function(){$("#saveFail").modal("hide")},800);
+		});
+
+		$('#visitTime').daterangepicker({
+		    "singleDatePicker": true,
+		    "showDropdowns": true,
+		    "autoApply": true,
+		    "locale": {
+		        "format": "YYYY/MM/DD",
+		        "separator": " - ",
+		        "applyLabel": "确定",
+		        "cancelLabel": "取消",
+		        "fromLabel": "From",
+		        "toLabel": "To",
+		        "customRangeLabel": "Custom",
+		        "weekLabel": "W",
+		        "daysOfWeek": ["日", "一", "二", "三", "四", "五", "六"], 
+		        "monthNames": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+		        "firstDay": 1
+		    },
+		    "startDate": "2016/01/01",
+		    "endDate": "2016/12/31",
+		    "minDate": "2010/01/01",
+		    "maxDate": "2030/12/31",
+		    "opens": "center"
+		}, function(start, end, label) {
+		  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+		});
 	});
 </script>
 </html>
