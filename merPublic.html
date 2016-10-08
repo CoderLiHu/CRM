@@ -99,21 +99,21 @@
           </div>
           <div class="pane-body pubilc_pad">
           	<!-- typein formgroup -->
-            <form class="form-inline">
+            <form class="form-inline container">
            		<div class="row margin15">
            			<div class="col-sm-3">
            			  <strong>筛选条件:</strong>	
            			</div>
            		</div>
             	<div class="row margin15">
-            		<div class="col-sm-4">
+            		<div class="col-md-10 col-lg-4 margin15">
             			<div class="form-group has-feedback">
 									  <label class="control-label" for="putinTime">入库时间：</label>
 									  <input type="text" class="form-control" id="putinTime" value="2016/01/01 - 2016/12/31" style="width:230px;">
 									  <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
 									</div>
 	            	</div>
-	            	<div class="col-sm-8">
+	            	<div class="col-md-10 col-lg-8">
 		            	<div class="form-group">
 		            		<label>地区：</label>
 		            		<select id="" class="form-control margin-r15">
@@ -141,7 +141,13 @@
 	            	</div>
             	</div>
             	<div class="row">
-            		<div class="col-sm-3">
+	            	<div class="col-md-4 col-lg-4 margin15">
+		            	<div class="form-group">
+		            		<label>商户名称：</label>
+		            		<input style="width:240px" type="text" class="form-control" placeholder="请输入商户名称">
+		            	</div>
+	            	</div>
+            		<div class="col-md-3 col-lg-3 margin15">
 		            	<div class="form-group">
 		            		<div class="btn-group">
 			            		<label for="calendar">商户状态：</label>
@@ -154,7 +160,7 @@
 			            	</div>
 		            	</div>	
 	            	</div>
-	            	<div class="col-sm-3">
+	            	<div class="col-md-3 col-lg-3 margin15">
 									<div class="form-group">
 			          		<label>商家分类：</label>
 			          		<select id="" class="form-control">
@@ -166,14 +172,8 @@
 			              </select>
 			          	</div>
 	            	</div>
-	            	<div class="col-sm-5">
-		            	<div class="form-group">
-		            		<label>商户名称：</label>
-		            		<input style="width:240px" type="text" class="form-control" placeholder="请输入商户名称">
-		            	</div>
-	            	</div>
-	            	<div class="col-sm-1">
-          				<button type="submit" class="btn btn-block btn-warning pull-right ">查询</button>
+	            	<div class="col-md-1 col-lg-1 margin15">
+          				<button type="submit" class="btn btn-block btn-warning pull-right btn-equalwidth">查询</button>
 	            	</div>
             	</div>
             </form>
@@ -187,10 +187,10 @@
 						   				<input type="checkbox" value="">&nbsp;&nbsp;全选
 						  			</label>
 									</div>
-									<button type="button" class="btn btn-sm btn-white btn-equalwidth">批量领取</button>
+									<button type="button" class="btn btn-sm btn-white btn-equalwidth" data-toggle="modal" data-target="#batchCaptureOrNot" data-backdrop="false">批量领取</button>
 									<button type="button" class="btn btn-sm btn-white btn-equalwidth" data-toggle="modal" data-target="#distribution">分配</button>
-									<div class="pull-right" data-toggle="modal" data-target="#inportSuccessfully" data-backdrop="false">
-										<button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip" data-placement="top" title="导入"><span class="glyphicon glyphicon-download text_large"></span></button>
+									<div class="pull-right" data-toggle="modal" data-target="#uploadOrNot" data-backdrop="false">
+										<button type="button" class="btn btn-sm btn-white margin-r15" data-toggle="tooltip" data-placement="top" title="导入"><span class="glyphicon glyphicon-download text_large lineheight15"></span></button>
 										商户数目：0/1256
 									</div>
 	            	</form>
@@ -279,6 +279,43 @@
   	</div>
 	</div>
 
+	<!--modal batch capture or not -->
+	<div class="modal fade" id="batchCaptureOrNot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog width400" role="document">
+	    <div class="modal-content">
+      	<div class="modal-body overflow-hidden">
+        		<p class="text-center lineheight80">确定批量领取吗?</p>
+      	</div>
+      	<div class="modal-footer">
+        	<div class="col-xs-3 col-xs-offset-2">
+	        	<button type="button" class="btn bg_primary btn-block  text_white" data-toggle="modal" data-target="#getSuccessfully" data-backdrop="false" data-dismiss="modal">确定</button>
+	        </div>
+	        <div class="col-xs-3 col-xs-offset-2">	
+	        	<button type="button" class="btn bg_gray btn-block text_white" data-dismiss="modal">取消</button>
+        	</div>
+      	</div>
+	    </div>
+		</div>
+	</div>
+
+	<!--modal upload or not -->
+	<div class="modal fade" id="uploadOrNot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  	<div class="modal-dialog width400" role="document">
+	    <div class="modal-content">
+      	<div class="modal-body overflow-hidden">
+        		<p class="text-center lineheight80">确定导入此文件吗?</p>
+      	</div>
+      	<div class="modal-footer">
+        	<div class="col-xs-3 col-xs-offset-2">
+	        	<button type="button" class="btn bg_primary btn-block  text_white" data-toggle="modal" data-target="#inportSuccessfully" data-backdrop="false" data-dismiss="modal">确定</button>
+	        </div>
+	        <div class="col-xs-3 col-xs-offset-2">	
+	        	<button type="button" class="btn bg_gray btn-block text_white" data-dismiss="modal">取消</button>
+        	</div>
+      	</div>
+	    </div>
+		</div>
+	</div>
 	<!--modal inport successfully -->
 	<div class="modal fade in" id="inportSuccessfully" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" style="width:230px" >
@@ -474,6 +511,7 @@
 	    </div>
 		</div>
 	</div>
+
 	<!--modal distribution -->
 	<div class="modal fade" id="distribution" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   	<div class="modal-dialog" role="document">
@@ -509,7 +547,8 @@
       	</div>
 	    </div>
 		</div>
-	</div>
+	</div>	
+
 
     
 </body>
