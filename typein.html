@@ -686,16 +686,16 @@
 			setTimeout(function(){$("#saveFail").modal("hide")},800);
 		});
 
-		var Today = getNowFormatDate();
+		var Now = getNowFormatDate();
 		$('[name="typeInTime"]').daterangepicker({
 				"timePicker": true,
-		    "timePicker24Hour": false,
+		    "timePicker24Hour": true,
 		    "timePickerIncrement": 5,
 		    "singleDatePicker": true,
 		    "showDropdowns": true,
 		    "autoApply": false,
 		    "locale": {
-		        "format": "YYYY/MM/DD",
+		        "format": "YYYY/MM/DD HH:mm",
 		        "separator": " - ",
 		        "applyLabel": "确定",
 		        "cancelLabel": "取消",
@@ -707,7 +707,7 @@
 		        "monthNames": ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
 		        "firstDay": 1
 		    },
-		    "startDate": Today,
+		    "startDate": Now,
 		    "endDate": "2016/12/31",
 		    "minDate": "2010/01/01",
 		    "maxDate": "2030/12/31",
@@ -718,7 +718,7 @@
     function getNowFormatDate() {
 	      var date = new Date();
 	      var seperator1 = "/";
-	      /*var seperator2 = ":";*/
+	      var seperator2 = ":";
 	      var month = date.getMonth() + 1;
 	      var strDate = date.getDate();
 	      if (month >= 1 && month <= 9) {
@@ -728,10 +728,10 @@
 	          strDate = "0" + strDate;
 	      }
 	      var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
-	              /*+ " " + date.getHours() + seperator2 + date.getMinutes()
-	              + seperator2 + date.getSeconds()*/;
+	              + " " + date.getHours() + seperator2 + date.getMinutes()
+	              /*+ seperator2 + date.getSeconds()*/;
 	      return currentdate;
-    }
+    };
 	});
 </script>
 </html>

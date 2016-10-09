@@ -142,6 +142,7 @@ th{text-align: center;}
 .tag{ color:#fff; padding: 5px 7px; border-radius:20px; font-size: 12px; overflow: hidden; display: inline-block;}
 .bg_info{background-color:#35A8E3;}/*未分配*/
 .bg_primary{ background-color:#00b39e; }/*待签约*/
+.bg_active{ background-color:#FFFFE8; }/*待签约*/
 .bg_green{ background-color: #77D03C; }/*已拜访*/  
 .bg_brown{ background-color: #c79c71; }/*未拜访*/
 .bg_yellow{ background-color: #FFA424; }/*已签约*/
